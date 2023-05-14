@@ -1,11 +1,12 @@
 <img
-  width="200"
   (load)="imgLoaded()"
   (error)="imgError()"
   [src]="img"
   *ngIf="img; else elseImg"
 />
 
+<!-- <h3> {{couter}} </h3> -->
+
 <ng-template #elseImg>
-  <img width="200" [src]="imageDefault" alt="foto" />
+  <img [src]="imageDefault" alt="foto" />
 </ng-template>

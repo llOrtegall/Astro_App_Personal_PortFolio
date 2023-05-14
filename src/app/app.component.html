@@ -1,5 +1,7 @@
-<p><input type="text" [(ngModel)]="imgParent"/></p>
+<app-products></app-products>
 
-<app-img (loaded)="onLoaded($event)" [img]="imgParent"></app-img>
-
-<app-product [product]="prod" *ngFor="let prod of products"></app-product>
+<!-- <p><input type="text" [(ngModel)]="imgParent"/></p>
+<button (click)="toggleImg()">Toogle Img</button>
+<p> {{showImg}}  </p>
+<app-img *ngIf="showImg" (loaded)="onLoaded($event)" [img]="imgParent"></app-img>
+<hr/> -->
