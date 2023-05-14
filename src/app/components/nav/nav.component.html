@@ -1,6 +1,6 @@
 <div class="show-mobile">
   <div>
-    <button>
+    <button (click)="toggleMenu()">
       <i class="uil uil-bars"></i>
     </button>
     <a href="">
@@ -9,6 +9,14 @@
     <a href="">
       <i class="uil uil-shopping-cart"></i>
     </a>
+  </div>
+  <div class="side-menu" [class.active]="activeMenu">
+    <button (click)="toggleMenu()">Close</button>
+    <ul>
+      <li><a href=""></a>All</li>
+      <li><a href=""></a>Clothes</li>
+      <li><a href=""></a>Electronics</li>
+    </ul>
   </div>
 </div>
 
