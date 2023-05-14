@@ -1,1 +1,5 @@
-<router-outlet></router-outlet>
+<p><input type="text" [(ngModel)]="imgParent"/></p>
+
+<app-img (loaded)="onLoaded($event)" [img]="imgParent"></app-img>
+
+<app-product [product]="prod" *ngFor="let prod of products"></app-product>
