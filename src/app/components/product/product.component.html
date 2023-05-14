@@ -1,4 +1,9 @@
 <app-img [img]="product.img"></app-img>
 
-<h2>{{ product.price}}</h2>
-<p>{{ product.title}}</p>
+<div class="card">
+  <h1>{{ product.title }}</h1>
+  <h2> <span>$ </span>{{ product.price }}</h2>
+  
+  <button (click)="onAddToCart()">Add Cart</button>
+</div>
+

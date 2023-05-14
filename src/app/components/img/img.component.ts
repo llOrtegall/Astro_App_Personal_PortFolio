@@ -25,14 +25,14 @@ export class ImgComponent
   constructor() {
     //TODO: Before Rendering
     //TODO: NO Asyn -- One time
-    console.log('contructor ', ' ===> imgValue', this.img);
+    // console.log('contructor ', ' ===> imgValue', this.img);
   }
 
   ngOnChanges() {
     //TODO: before render - during
     //TODO: changes inputs --- times
     // ? Here Changes Inputs, Buenas Practicas
-    console.log('ngOnches ', ' ===> imgValue', this.img);
+    // console.log('ngOnches ', ' ===> imgValue', this.img);
   }
 
   ngOnInit(): void {
@@ -48,13 +48,13 @@ export class ImgComponent
   ngAfterViewInit(): void {
     // ? Before Rendering --- :O
     // ? handler childrens
-    console.log('AfterView ');
+    // console.log('AfterView ');
   }
 
   ngOnDestroy(): void {
     // ! delete
     // ? Detenie
-    console.log('ngOnDestroy');
+    // console.log('ngOnDestroy');
     // window.clearInterval(this.couterFn);
   }
 
@@ -63,7 +63,7 @@ export class ImgComponent
   }
 
   imgLoaded() {
-    console.log('Log Hijo');
-    this.loaded.emit('this.img');
+    // console.log('Log Hijo');
+    // this.loaded.emit('this.img');
   }
 }
