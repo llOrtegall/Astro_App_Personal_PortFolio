@@ -1,8 +1,8 @@
-<app-img [img]="product.img"></app-img>
+<app-img [img]="product.image"></app-img>
 
 <div class="card">
-  <h1>{{ product.title }}</h1>
-  <h2> <span>$ </span>{{ product.price }}</h2>
+  <h1>{{ product.title  }}</h1>
+  <h2>{{ product.price | currency: 'USD'}}</h2>
   
   <button (click)="onAddToCart()">Add Cart</button>
 </div>

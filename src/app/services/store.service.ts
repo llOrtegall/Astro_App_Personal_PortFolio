@@ -7,7 +7,6 @@ import { Product } from '../models/product.model'
 export class StoreService {
 
   private myShoppinCard: Product[] = [];
-
   constructor() { }
 
   addProduct(product: Product) {

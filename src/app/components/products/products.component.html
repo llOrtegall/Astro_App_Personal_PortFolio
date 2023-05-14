@@ -1,15 +1,11 @@
-<p>
-  La Cantidad {{myShoppinCard.length}}
-</p>
-<p>
-  Total: ${{total}}
-</p>
+<p>La Cantidad {{ myShoppinCard.length }}</p>
+<p>Total: ${{ total }}</p>
+<p>Today: {{today | date}} </p>
 
 <div class="products--grid">
-  <app-product 
-  [product]="prod" 
-  *ngFor="let prod of products"
-  (addedProduct)="onAddToShoppinCard($event)"
+  <app-product
+    [product]="prod"
+    *ngFor="let prod of products"
+    (addedProduct)="onAddToShoppinCard($event)"
   ></app-product>
-
 </div>
