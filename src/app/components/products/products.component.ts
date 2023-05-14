@@ -11,10 +11,10 @@ export class ProductsComponent {
   products: Product[] = [
     {
       id: 4,
-      title: 'product 1',
-      price: 300000,
+      title: 'Change title',
+      price: 324,
       description: 'good',
-      img: 'https://i.pinimg.com/474x/69/44/39/694439b3031503a7564eda9e24f673eb.jpg',
+      img: 'https://picsum.photos/640/640?r=9702',
     },
     {
       id: 7,
