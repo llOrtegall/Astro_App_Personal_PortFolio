@@ -37,6 +37,18 @@
   color: black;
 }
 
+.counter{
+  display: flex;
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  top: 24px;
+  right: 48px;
+  border-radius: 50%;
+  padding: 5px 8px;
+  background-color: rgba($color: #13b3cf, $alpha: 1.0);
+}
+
 .uil-bars {
   font-size: 32px;
   color: black;
