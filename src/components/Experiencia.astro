@@ -1,0 +1,32 @@
+---
+import ExperienciaItem from "./ExperienciaItem.astro";
+
+const EXPERIENCIE = [
+  {
+    title: "Analista De Desarrollo",
+    company: "Grupo Empresarial Multired S.A",
+    description:
+      "-> Desarrollo y mantenimiento de aplicaciones web, Implementación inicial de API REST para acceder a datos internos de la compañía. Creación de aplicaciones web responsivas. Inicialización de contenedores Docker para el despliegue de aplicaciones",
+    date: "2023 - Actualidad",
+    tecnologias: ["TypeScript", "Node", "React.js", "Docker", "Express.js", "Mysql"],
+  },
+  {
+    title: "Técnico de Soporte y Mantenimiento",
+    company: "Grupo Empresarial Multired S.A",
+    description:
+      "-> Soporte técnico remoto y presencial a usuarios internos y externos, mantenimiento de equipos de cómputo, instalación de software, configuración de redes, configuración de impresoras, configuración de dispositivos móviles, testeo de aplicaciones web y móviles.",
+    date: "2020 - 2023",
+    tecnologias: ["Windows", "Linux Ubuntu", "Android"],
+  }
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    EXPERIENCIE.map((item) => (
+      <li class="flex flex-col pl-6 py-6">
+        <ExperienciaItem {...item} />
+      </li>
+    ))
+  }
+</ol>
