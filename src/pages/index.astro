@@ -1,13 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
+import GitHub from "../components/Icons/GitHub.astro";
+import SocialIcons from "../components/SocialIcons.astro";
+import LinkedIn from "../components/Icons/LinkedIn.astro";
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
 		<section class="w-full mx-auto lg:w-[740px] py-44">
-			<h1 class="text-white text-3xl font-bold flex flex-row gap-x-4 pb-10">
-				! Hola, Me llamo Ivan
+			<h1 class="text-white text-3xl font-bold flex flex-row gap-x-4 pb-6">
+				! Hola, Me llamo Ivan Ortega
 				<a
 					href="https://www.linkedin.com/in/llortegall/"
 					class="flex justify-center items-center"
@@ -17,13 +20,29 @@ import Badge from "../components/Badge.astro";
 					<Badge>Disponible Para Desarrollar.</Badge>
 				</a>
 			</h1>
-			<h2 class="text-2xl opacity-80">
-				1 año de experiencia, Desarrollador Web y Backend. Me especializo en
-				construción de Aplicaciones Web, implementando el stack MERN (MongoDB,
-				Express, React, Node.js).
+			<h2 class="text-2xl text-wrap">
+				<span class="text-yellow-200">1 año de experiencia,</span> Desarrollador
+				Web y Backend. <span class="text-yellow-200"
+					>Me especializo en construción de Aplicaciones Web</span
+				>, implementando el stack MERN (
+				<span class="text-green-300">MongoDB,</span>
+				<span class="text-orange-300">Express,</span>
+				<span class="text-blue-300">React,</span>
+				<span class="text-green-400">Node.js</span> ).
 			</h2>
+
+			<nav class="flex gap-x-2 mt-4">
+				<SocialIcons href="https://www.linkedin.com/in/llortegall/">
+					<LinkedIn class="w-6 h-6" />
+					LinkedIn
+				</SocialIcons>
+				<SocialIcons href="https://github.com/llOrtegall">
+					<GitHub class="w-6 h-6" />
+					GitHub
+				</SocialIcons>
+			</nav>
 		</section>
 	</main>
-</Layout>
 
-<style></style>
+	<style></style>
+</Layout>
