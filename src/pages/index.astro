@@ -4,9 +4,13 @@ import Badge from "../components/Badge.astro";
 import GitHub from "../components/Icons/GitHub.astro";
 import SocialIcons from "../components/SocialIcons.astro";
 import LinkedIn from "../components/Icons/LinkedIn.astro";
+import Mail from "../components/Icons/Mail.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout
+	title="Porfolio de Ivan Ortega - Desarrollador y Programador Web"
+	description="contrata a Ivan Ortega como desarrollador web, backend, frontend, fullstack, mern, react, node, express, mongodb"
+>
 	<main>
 		<section class="w-full mx-auto lg:w-[740px] py-44">
 			<h1 class="text-white text-3xl font-bold flex flex-row gap-x-4 pb-6">
@@ -31,7 +35,7 @@ import LinkedIn from "../components/Icons/LinkedIn.astro";
 				<span class="text-green-400">Node.js</span> ).
 			</h2>
 
-			<nav class="flex gap-x-2 mt-4">
+			<nav class="flex gap-x-4 mt-4">
 				<SocialIcons href="https://www.linkedin.com/in/llortegall/">
 					<LinkedIn class="w-6 h-6" />
 					LinkedIn
@@ -39,6 +43,10 @@ import LinkedIn from "../components/Icons/LinkedIn.astro";
 				<SocialIcons href="https://github.com/llOrtegall">
 					<GitHub class="w-6 h-6" />
 					GitHub
+				</SocialIcons>
+				<SocialIcons>
+					<Mail class="w-6 h-6" />
+					IvanOrtega_97@hotmail.com
 				</SocialIcons>
 			</nav>
 		</section>
