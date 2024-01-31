@@ -1,14 +1,29 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1>Porfolio</h1>
+		<section class="w-full mx-auto lg:w-[740px] py-44">
+			<h1 class="text-white text-3xl font-bold flex flex-row gap-x-4 pb-10">
+				! Hola, Me llamo Ivan
+				<a
+					href="https://www.linkedin.com/in/llortegall/"
+					class="flex justify-center items-center"
+					target="_blank"
+					rel="noopener"
+				>
+					<Badge>Disponible Para Desarrollar.</Badge>
+				</a>
+			</h1>
+			<h2 class="text-2xl opacity-80">
+				1 año de experiencia, Desarrollador Web y Backend. Me especializo en
+				construción de Aplicaciones Web, implementando el stack MERN (MongoDB,
+				Express, React, Node.js).
+			</h2>
+		</section>
 	</main>
 </Layout>
 
-<style>
-	
-</style>
+<style></style>
