@@ -1,15 +1,15 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
-import GitHub from "../components/Icons/GitHub.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import BriefIcon from "../components/Icons/BriefIcon.astro";
 import SocialIcons from "../components/SocialIcons.astro";
 import LinkedIn from "../components/Icons/LinkedIn.astro";
-import Mail from "../components/Icons/Mail.astro";
 import Experiencia from "../components/Experiencia.astro";
-import BriefIcon from "../components/Icons/BriefIcon.astro";
-import SectionContainer from "../components/SectionContainer.astro";
+import GitHub from "../components/Icons/GitHub.astro";
 import Proyects from "../components/Proyects.astro";
+import Mail from "../components/Icons/Mail.astro";
 import Code from "../components/Icons/Code.astro";
+import Badge from "../components/Badge.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
@@ -22,7 +22,7 @@ import Code from "../components/Icons/Code.astro";
 				<img
 					class="rounded-full sm:hidden"
 					width="150"
-					src="/ivan.jpeg"
+					src="/public/ivan.jpg"
 					alt="Ivan Ortega foto"
 				/>
 				<h1
@@ -68,7 +68,7 @@ import Code from "../components/Icons/Code.astro";
 			</nav>
 		</SectionContainer>
 
-		<SectionContainer id="experiencia" class="py-20 xl:py-52">
+		<SectionContainer id="experiencia" class="py-12 xl:py-24">
 			<h2 class="text-3xl font-semibold flex gap-x-2 items-center pl-5">
 				<BriefIcon class="size-8" />
 				Experiencia Laboral
@@ -76,13 +76,17 @@ import Code from "../components/Icons/Code.astro";
 			<Experiencia />
 		</SectionContainer>
 
-		<SectionContainer id="proyectos" class="py-20 xl:py-52">
+		<div class="py-40">
+
+		</div>
+
+		<!-- <SectionContainer id="proyectos" class="py-20 xl:py-52">
 			<h2 class="text-3xl font-semibold flex gap-x-2 items-center pl-5">
 				<Code class="size-8" />
 				Proyectos Relizados
 			</h2>
 			<Proyects />
-		</SectionContainer>
+		</SectionContainer> -->
 	</main>
 
 	<style></style>
