@@ -1,3 +1,11 @@
+---
+interface Props {
+  imagenes: string[]
+}
+
+const { imagenes } = Astro.props
+---
+
 <style>
   .container {
     height: 100vh;
@@ -40,10 +48,13 @@
 <div class="container">
   <div class="slide">
     <ul>
-      <li><img src="01.webp" alt="" /></li>
-      <li><img src="02.webp" alt="" /></li>
-      <li><img src="03.webp" alt="" /></li>
-      <li><img src="04.webp" alt="" /></li>
+      {
+        imagenes.map( img => (
+          <li> 
+            <img src={img} alt="" />  
+          </li>
+        ))
+      }
     </ul>
   </div>
 </div>

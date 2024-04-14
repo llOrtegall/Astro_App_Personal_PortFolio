@@ -2,25 +2,27 @@
 import Link from "../components/Icons/Link.astro";
 import Github from "../components/Icons/GitHub.astro";
 import Carrousel from "./Carrousel.astro";
+import Badge from "./Badge.astro";
 
-const BodegaStock = {
+const BodegaStock = [{
   title: "Bodega Stock Soporte",
-  description: "Descripción del proyecto 1",
+  description: "Proyecto desarrollado con la finalidad de crear un sistema de gestion de invetario y creación de movimientos en donde a los activos he insumos de la compañia, se brindara trazabilidad y segumiento, con la generación de reportes automatizados",
   img: ["/01.webp", "/02.webp", "/03.webp", "/04.webp"],
   url: "proyecto1.html",
   github: "codegithub.com",
   tags: ["tag1", "tag2", "tag3"],
-};
+}]
 
 ---
 
 <section class="flex w-full flex-col">
-  
-    <article>
-     <h1>{BodegaStock.title}</h1>
-     <p>{BodegaStock.description}</p>
-     <Carrousel />
-    </article>
-
-  
+  {
+    BodegaStock.map(proyec => (
+      <div class="py-4">
+        <Badge>{proyec.title}</Badge>
+        <p class="py-2">{proyec.description}</p>
+        <Carrousel imagenes={proyec.img} />
+      </div>
+    ))
+  }
 </section>
