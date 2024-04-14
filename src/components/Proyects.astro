@@ -1,11 +1,12 @@
 ---
 import Link from "../components/Icons/Link.astro";
 import Github from "../components/Icons/GitHub.astro";
+import Carrousel from "./Carrousel.astro";
 
 const BodegaStock = {
   title: "Bodega Stock Soporte",
   description: "Descripción del proyecto 1",
-  img: ["/01.webp", "/02.webp", "/03.webp"],
+  img: ["/01.webp", "/02.webp", "/03.webp", "/04.webp"],
   url: "proyecto1.html",
   github: "codegithub.com",
   tags: ["tag1", "tag2", "tag3"],
@@ -14,11 +15,12 @@ const BodegaStock = {
 ---
 
 <section class="flex w-full flex-col">
-  {
+  
     <article>
      <h1>{BodegaStock.title}</h1>
-     <p>{BodegaStock.description}</p>  
+     <p>{BodegaStock.description}</p>
+     <Carrousel />
     </article>
 
-  }
+  
 </section>
