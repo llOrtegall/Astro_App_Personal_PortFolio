@@ -1,7 +1,6 @@
 ---
 import "@fontsource-variable/onest";
 import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 
 interface Props {
 	title: string;
@@ -25,7 +24,6 @@ const { title, description } = Astro.props;
 	<body class="bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] bg-no-repeat bg-fixed w-fit sm:w-full">
 		<Header />
 		<slot />
-		<Footer />
 	</body>
 </html>
 
@@ -40,9 +38,10 @@ const { title, description } = Astro.props;
 	}
 
 	body {;
-		background: #050505;
 		display: flex;
+		justify-content: center;
 		flex-direction: column;
+		background: #050505;
 	}
 
 	@media (prefers-reduced-motion: reduce) {

@@ -10,34 +10,50 @@ import Mail from "../components/Icons/Mail.astro";
 import Code from "../components/Icons/Code.astro";
 import Badge from "../components/Badge.astro";
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
 ---
 
-<Layout	title="Porfolio de Ivan Ortega - Desarrollador y Programador Web"
-	description="contrata a Ivan Ortega como desarrollador web, backend, frontendh []stack, mern, react, node, express, mongodb">
-
-	<main class="">
-		
-		<SectionContainer id="inicio" class="flex flex-col justify-center">
+<Layout
+	title="Porfolio de Ivan Ortega - Desarrollador y Programador Web"
+	description="contrata a Ivan Ortega como desarrollador web, backend, frontendh []stack, mern, react, node, express, mongodb"
+>
+	<main class="flex flex-col">
+		<SectionContainer id="inicio" class="mb-4">
 			<section class="flex flex-col gap-y-4 lg:block items-center">
-				<img class="rounded-full sm:hidden" width="150" src="/ivan.jpg" alt="Ivan Ortega foto" />
-				<h1 class="text-white mx-8 md:mx-6 lg:mx-8 xl:mx-0 text-xl sm:text-3xl font-bold flex flex-col md:flex-row gap-y-4 md:gap-y-0 gap-x-4 pb-6" >
+				<img
+					class="rounded-full sm:hidden"
+					width="150"
+					src="/ivan.jpg"
+					alt="Ivan Ortega foto"
+				/>
+				<h1
+					class="text-white mx-8 md:mx-6 lg:mx-8 xl:mx-0 text-xl sm:text-3xl font-bold flex flex-col md:flex-row gap-y-4 md:gap-y-0 gap-x-4 pb-6"
+				>
 					<p>! Hola, Me llamo Ivan Ortega</p>
-					<a href="https://www.linkedin.com/in/llortegall/" class="flex justify-center items-center" target="_blank" rel="noopener" >
+					<a
+						href="https://www.linkedin.com/in/llortegall/"
+						class="flex justify-center items-center"
+						target="_blank"
+						rel="noopener"
+					>
 						<Badge>Disponible Para Desarrollar.</Badge>
 					</a>
 				</h1>
 
 				<h2 class="mx-8 md:mx-6 lg:mx-8 xl:mx-0 text-2xl text-pretty">
-					<span class="text-yellow-200">1 año de experiencia,</span> 
-					Desarrollador Full Stack, <span class="text-yellow-200"> Me especializo en construción de Aplicaciones Web</span>, 
-					implementando el stack MERN (
+					<span class="text-yellow-200">1 año de experiencia,</span>
+					Desarrollador Full Stack, <span class="text-yellow-200">
+						Me especializo en construción de Aplicaciones Web</span
+					>, implementando el stack MERN (
 					<span class="text-green-300">MongoDB,</span>
 					<span class="text-orange-300">Express,</span>
 					<span class="text-blue-300">React,</span>
 					<span class="text-green-400">Node.js</span> ).
 				</h2>
 			</section>
-			<nav class="flex flex-col md:flex-row px-4 md:px-0 gap-y-2 lg:gap-x-8 mt-6" >
+			<nav
+				class="flex flex-col md:flex-row px-4 md:px-0 gap-y-2 lg:gap-x-8 mt-6"
+			>
 				<SocialIcons href="https://www.linkedin.com/in/llortegall/">
 					<LinkedIn class="size-6" />
 					LinkedIn
@@ -53,20 +69,19 @@ import Layout from "../layouts/Layout.astro";
 			</nav>
 		</SectionContainer>
 
-		<SectionContainer id="experiencia" class="flex flex-col justify-center">
+		<SectionContainer id="experiencia" class="mb-44">
 			<h2 class="text-3xl font-semibold flex gap-x-2 items-center pl-5">
-				<BriefIcon class="size-8" /> Experiencia Laboral </h2>
+				<BriefIcon class="size-8" /> Experiencia Laboral
+			</h2>
 			<Experiencia />
 		</SectionContainer>
 
-		<SectionContainer id="proyectos" class="flex flex-col justify-center">
+		<SectionContainer id="proyectos">
 			<h2 class="text-3xl font-semibold flex gap-x-2 items-center pl-5">
 				<Code class="size-8" />
 				<span>Proyectos Relizados</span>
 			</h2>
 			<Proyects />
 		</SectionContainer>
-
 	</main>
-
 </Layout>
