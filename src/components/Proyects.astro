@@ -1,55 +1,58 @@
 ---
-import Link from "../components/Icons/Link.astro";
 import Github from "../components/Icons/GitHub.astro";
+import Link from "../components/Icons/Link.astro";
+import Carrousel from "./Carrousel.astro";
+import Badge from "./Badge.astro";
+import SocialIcons from "./SocialIcons.astro";
+import GitHub from "../components/Icons/GitHub.astro";
 
-const PROYECTS = [
+const BodegaStock = [
   {
-    title: "Proyecto 1",
-    description: "Descripción del proyecto 1",
-    img: "img/proyecto1.jpg",
-    url: "proyecto1.html",
-    github: "codegithub.com",
-    tags: ["tag1", "tag2", "tag3"],
-  },
-  {
-    title: "Proyecto 2",
-    description: "Descripción del proyecto 2",
-    img: "img/proyecto2.jpg",
-    url: "proyecto2.html",
-    github: "codegithub.com",
-    tags: ["tag1", "tag2", "tag3"],
-  },
-  {
-    title: "Proyecto 3",
-    description: "Descripción del proyecto 3",
-    img: "img/proyecto3.jpg",
-    github: "codegithub.com",
-    url: "proyecto3.html",
-    tags: ["tag1", "tag2", "tag3"],
+    title: "Bodega Stock Soporte",
+    description:
+      "Proyecto desarrollado con la finalidad de crear un sistema de gestion de invetario y creación de movimientos en donde a los activos he insumos de la compañia, se brindara trazabilidad y segumiento, con la generación de reportes automatizados",
+    img: ["/01.webp", "/02.webp", "/03.webp", "/04.webp"],
+    url: "#",
+    github: "https://github.com/llOrtegall/app-bodega-stock",
+    tags: [
+      "TypeScript",
+      "React",
+      "NodeJS",
+      "Express",
+      "MongoDB",
+      "Docker",
+      "JavaScript",
+    ],
   },
 ];
 ---
 
-<section class="grid grid-cols-2 gap-8">
+<section class="">
   {
-    PROYECTS.map(({ title, description, img, url, github, tags }) => (
-      <article class="p-4">
-        <h3 class="text-center">{title}</h3>
-        <figure>
-          <img src={img} alt="Captura de proyecto" />
-        </figure>
-        <p>{description}</p>
-        <ul class="flex justify-around">
-          <p>Técnologias:</p>
-          {tags.map((tag) => (
-            <li>{tag}</li>
-          ))}
-        </ul>
-        <figure class="flex justify-around">
-          <a href="" class="flex gap-4 items-center justify-center border px-2 py-1 rounded-lg bg-gray-700 hover:bg-white hover:text-gray-700 transition-all">Link: <Link class="size-7" /></a>
-          <a href="" class="flex gap-4 items-center justify-center border px-2 py-1 rounded-lg bg-gray-700 hover:bg-white hover:text-gray-700 transition-all">Codigo: <Github class="size-6" /></a>
-        </figure>
-      </article>
+    BodegaStock.map((proyec) => (
+      <div>
+        <article class="flex flex-col">
+          <h1 class="pb-3">
+            <Badge>{proyec.title}</Badge>
+          </h1>
+          <p>{proyec.description}</p>
+
+          <nav class="flex flex-col md:flex-row px-4 md:px-0 gap-y-2 lg:gap-x-8 mt-6">
+            <SocialIcons href={proyec.github}>
+              <GitHub class="size-6" />
+              Codigo GitHub
+            </SocialIcons>
+            
+            <div class="flex flex-wrap gap-2 items-center">
+              <p>Tecnologías Utilizadas:</p>
+              {proyec.tags.map((tag) => (
+                <span class="text-yellow-600">{tag}</span>
+              ))}
+            </div>
+          </nav>
+        </article>
+        <Carrousel imagenes={proyec.img} />
+      </div>
     ))
   }
 </section>

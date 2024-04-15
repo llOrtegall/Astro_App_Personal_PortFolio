@@ -10,19 +10,20 @@ import Mail from "../components/Icons/Mail.astro";
 import Code from "../components/Icons/Code.astro";
 import Badge from "../components/Badge.astro";
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
 ---
 
 <Layout
 	title="Porfolio de Ivan Ortega - Desarrollador y Programador Web"
 	description="contrata a Ivan Ortega como desarrollador web, backend, frontendh []stack, mern, react, node, express, mongodb"
 >
-	<main>
-		<SectionContainer class="py-20 lg:py-52">
+	<main class="flex flex-col">
+		<SectionContainer id="inicio" class="mb-4">
 			<section class="flex flex-col gap-y-4 lg:block items-center">
 				<img
 					class="rounded-full sm:hidden"
 					width="150"
-					src="/public/ivan.jpg"
+					src="/ivan.jpg"
 					alt="Ivan Ortega foto"
 				/>
 				<h1
@@ -40,9 +41,9 @@ import Layout from "../layouts/Layout.astro";
 				</h1>
 
 				<h2 class="mx-8 md:mx-6 lg:mx-8 xl:mx-0 text-2xl text-pretty">
-					<span class="text-yellow-200">1 año de experiencia,</span> Desarrollador
-					Web y Backend. <span class="text-yellow-200"
-						>Me especializo en construción de Aplicaciones Web</span
+					<span class="text-yellow-200">1 año de experiencia,</span>
+					Desarrollador Full Stack, <span class="text-yellow-200">
+						Me especializo en construción de Aplicaciones Web</span
 					>, implementando el stack MERN (
 					<span class="text-green-300">MongoDB,</span>
 					<span class="text-orange-300">Express,</span>
@@ -68,26 +69,19 @@ import Layout from "../layouts/Layout.astro";
 			</nav>
 		</SectionContainer>
 
-		<SectionContainer id="experiencia" class="py-12 xl:py-24">
+		<SectionContainer id="experiencia" class="mb-44">
 			<h2 class="text-3xl font-semibold flex gap-x-2 items-center pl-5">
-				<BriefIcon class="size-8" />
-				Experiencia Laboral
+				<BriefIcon class="size-8" /> Experiencia Laboral
 			</h2>
 			<Experiencia />
 		</SectionContainer>
 
-		<div class="py-40">
-
-		</div>
-
-		<!-- <SectionContainer id="proyectos" class="py-20 xl:py-52">
-			<h2 class="text-3xl font-semibold flex gap-x-2 items-center pl-5">
+		<SectionContainer id="proyectos">
+			<h2 class="text-3xl font-semibold flex gap-x-2 items-center pl-5 pb-10">
 				<Code class="size-8" />
-				Proyectos Relizados
+				<span>Proyectos Relizados</span>
 			</h2>
 			<Proyects />
-		</SectionContainer> -->
+		</SectionContainer>
 	</main>
-
-	<style></style>
 </Layout>

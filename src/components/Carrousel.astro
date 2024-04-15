@@ -1,0 +1,60 @@
+---
+interface Props {
+  imagenes: string[]
+}
+
+const { imagenes } = Astro.props
+---
+
+<style>
+  .container {
+    height: auto;
+    width: 100%;
+    display: grid;
+    place-content: center;
+  }
+
+  .slide{
+    width: 100vw;
+    max-width: 1000px;
+    height: 720px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .slide ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    animation: slide 25s infinite cubic-bezier(0.55, 0.48, 0.37, 0.92);
+  }
+
+  @keyframes slide {
+    0% { margin-left: 0;}
+    20% { margin-left: 0;}
+
+    25% { margin-left: -100%;}
+    45% { margin-left: -100%;}
+
+    50% { margin-left: -200%;}
+    70% { margin-left: -200%;}
+
+    75% { margin-left: -300%;}
+    100% { margin-left: -300%;}
+  }
+</style>
+
+<div class="container pt-4">
+  <div class="slide">
+    <ul>
+      {
+        imagenes.map( img => (
+          <li> 
+            <img src={img} alt="" />  
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
