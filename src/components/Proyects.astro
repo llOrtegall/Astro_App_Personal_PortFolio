@@ -1,26 +1,56 @@
 ---
-import Link from "../components/Icons/Link.astro";
 import Github from "../components/Icons/GitHub.astro";
+import Link from "../components/Icons/Link.astro";
 import Carrousel from "./Carrousel.astro";
 import Badge from "./Badge.astro";
+import SocialIcons from "./SocialIcons.astro";
+import GitHub from "../components/Icons/GitHub.astro";
 
-const BodegaStock = [{
-  title: "Bodega Stock Soporte",
-  description: "Proyecto desarrollado con la finalidad de crear un sistema de gestion de invetario y creación de movimientos en donde a los activos he insumos de la compañia, se brindara trazabilidad y segumiento, con la generación de reportes automatizados",
-  img: ["/01.webp", "/02.webp", "/03.webp", "/04.webp"],
-  url: "proyecto1.html",
-  github: "codegithub.com",
-  tags: ["tag1", "tag2", "tag3"],
-}]
-
+const BodegaStock = [
+  {
+    title: "Bodega Stock Soporte",
+    description:
+      "Proyecto desarrollado con la finalidad de crear un sistema de gestion de invetario y creación de movimientos en donde a los activos he insumos de la compañia, se brindara trazabilidad y segumiento, con la generación de reportes automatizados",
+    img: ["/01.webp", "/02.webp", "/03.webp", "/04.webp"],
+    url: "#",
+    github: "https://github.com/llOrtegall/app-bodega-stock",
+    tags: [
+      "TypeScript",
+      "React",
+      "NodeJS",
+      "Express",
+      "MongoDB",
+      "Docker",
+      "JavaScript",
+    ],
+  },
+];
 ---
 
-<section class="flex w-full flex-col">
+<section class="">
   {
-    BodegaStock.map(proyec => (
-      <div class="py-4">
-        <Badge>{proyec.title}</Badge>
-        <p class="py-2">{proyec.description}</p>
+    BodegaStock.map((proyec) => (
+      <div>
+        <article class="flex flex-col">
+          <h1 class="pb-3">
+            <Badge>{proyec.title}</Badge>
+          </h1>
+          <p>{proyec.description}</p>
+
+          <nav class="flex flex-col md:flex-row px-4 md:px-0 gap-y-2 lg:gap-x-8 mt-6">
+            <SocialIcons href={proyec.github}>
+              <GitHub class="size-6" />
+              Codigo GitHub
+            </SocialIcons>
+            
+            <div class="flex flex-wrap gap-2 items-center">
+              <p>Tecnologías Utilizadas:</p>
+              {proyec.tags.map((tag) => (
+                <span class="text-yellow-600">{tag}</span>
+              ))}
+            </div>
+          </nav>
+        </article>
         <Carrousel imagenes={proyec.img} />
       </div>
     ))
