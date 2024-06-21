@@ -15,11 +15,11 @@ const { title, description } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-	</head>
+</head>
 
 	<body class="bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] bg-no-repeat bg-fixed w-fit sm:w-full">
 		<Header />
@@ -35,13 +35,6 @@ const { title, description } = Astro.props;
 	html {
 		font-family: "Onest Variable", system-ui, sans-serif;
 		scroll-behavior: smooth;
-	}
-
-	body {;
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		background: #050505;
 	}
 
 	@media (prefers-reduced-motion: reduce) {

@@ -3,7 +3,7 @@ import ExperienciaItem from "./ExperienciaItem.astro";
 
 const EXPERIENCIE = [
   {
-    title: "Analista De Desarrollo",
+    title: "Analista De Aplicaciones Web",
     company: "Grupo Empresarial Multired S.A",
     description:
       "-> Desarrollo y mantenimiento de aplicaciones web, Implementación inicial de API REST para acceder a datos internos de la compañía. Creación de aplicaciones web responsivas. Inicialización de contenedores Docker para el despliegue de aplicaciones y/o micro servicios coorporativos",
@@ -21,10 +21,10 @@ const EXPERIENCIE = [
 ]
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">
+<ol class="flex flex-col gap-10 ">
   {
     EXPERIENCIE.map((item) => (
-      <li class="flex flex-col pl-6 py-6">
+      <li class="">
         <ExperienciaItem {...item} />
       </li>
     ))
