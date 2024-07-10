@@ -1,5 +1,4 @@
 ---
-import SectionContainer from "../components/SectionContainer.astro";
 import BriefIcon from "../components/Icons/BriefIcon.astro";
 import SocialIcons from "../components/SocialIcons.astro";
 import LinkedIn from "../components/Icons/LinkedIn.astro";
@@ -14,57 +13,55 @@ import Header from "../components/Header.astro";
 ---
 
 <Layout
-	title="Porfolio de Ivan Ortega - Desarrollador y Programador Web" description="contrata a Ivan Ortega como desarrollador web, backend, frontendh []stack, mern, react, node, express, mongodb">
-	<main class="flex flex-col">
-		 <SectionContainer id="inicio" classname="justify-around items-center mb-20">
-				<img class="rounded-full" width="150" src="/ivan.jpg" alt="Ivan Ortega foto" />
-				<h1 class="flex flex-col items-center gap-2" >
-					<p>! Hola, Me llamo Ivan Ortega Garzón</p>
-					<a href="https://www.linkedin.com/in/llortegall/" class="" target="_blank" rel="noopener" >
-						<Badge>Disponible Para Desarrollar.</Badge>
-					</a>
-				</h1>
+	title="Porfolio de Ivan Ortega - Desarrollador y Programador Web"
+	description="contrata a Ivan Ortega como desarrollador web, backend, frontendh []stack, mern, react, node, express, mongodb"
+>
 
-				<article class="w-full px-4 text-pretty text-base">
-					<p><span class="text-yellow-200"> 1 año de experiencia, </span>Desarrollador Full Stack,
-					<span class="text-yellow-200">Me especializo en construción de Aplicaciones Web</span>, 
-					implementando el stack MERN <span class="text-green-300">MongoDB,</span>
+	<section id="inicio" class="h-[95vh] flex flex-col px-96">
+			<h1 class="flex flex-col items-center gap-2">
+				<p>! Hola, Me llamo Ivan Ortega Garzón</p>
+				<a
+					href="https://www.linkedin.com/in/llortegall/"
+					class=""
+					target="_blank"
+					rel="noopener"
+				>
+					<Badge>Disponible Para Desarrollar.</Badge>
+				</a>
+			</h1>
+
+			<article class="w-full px-4 text-pretty text-base">
+				<p>
+					<span class="text-yellow-200">
+						1 año de experiencia,
+					</span>Desarrollador Full Stack,
+					<span class="text-yellow-200"
+						>Me especializo en construción de Aplicaciones Web</span
+					>, implementando el stack MERN <span class="text-green-300"
+						>MongoDB,</span
+					>
 					<span class="text-orange-300">Express,</span>
 					<span class="text-blue-300">React,</span>
-					<span class="text-green-400">Node.js</span>. No obstante, tengo experiencia con diferentes tecnologías como: Docker, Git + GitHub, Nginx, MySQL, OracleDB
-					</p>
-				</article>
-			</section>
-			<nav class="flex flex-col gap-2">
-				<SocialIcons href="https://www.linkedin.com/in/llortegall/">
-					<LinkedIn class="size-6" />
-					LinkedIn
-				</SocialIcons>
-				<SocialIcons href="https://github.com/llOrtegall">
-					<GitHub class="size-6" />
-					GitHub
-				</SocialIcons>
-				<SocialIcons>
-					<Mail class="size-6" />
-					IvanOrtega_97@hotmail.com
-				</SocialIcons>
-			</nav>
-		</SectionContainer>
+					<span class="text-green-400">Node.js</span>. No obstante, tengo
+					experiencia con diferentes tecnologías como: Docker, Git + GitHub,
+					Nginx, MySQL, OracleDB
+				</p>
+			</article>
+	</section>
 
-		<SectionContainer id="experiencia" classname="flex flex-col px-4 mb-20">
-			<h2 class="flex gap-2 items-center">
-				<BriefIcon class="" /> 
-				<p class="text-xl font-semibold pt-1">Experiencia Laboral</p>
-			</h2>
-			<Experiencia />
-		</SectionContainer>
+	<section id="experiencia" class="">
+		<h2 class="flex gap-2 items-center">
+			<BriefIcon class="" />
+			<p class="text-xl font-semibold pt-1">Experiencia Laboral</p>
+		</h2>
+		<Experiencia />
+	</section>
 
-		<SectionContainer id="proyectos" classname="justify-around mb-20">
-			<h2 class="flex gap-2 items-center pb-4 px-4">
-				<Code class="size-8" />
-				<span class="pt-1">Proyectos Relizados</span>
-			</h2>
-			<Proyects />
-		</SectionContainer>
-	</main>
+	<section id="proyectos" class="">
+		<h2 class="flex gap-2 items-center pb-4 px-4">
+			<Code class="size-8" />
+			<span class="pt-1">Proyectos Relizados</span>
+		</h2>
+		<Proyects />
+	</section>
 </Layout>
