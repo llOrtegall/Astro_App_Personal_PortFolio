@@ -1,12 +1,10 @@
-<header class="w-full flex gap-12 justify-center items-center py-4 top-0 fixed">
-  <img
-    class="rounded-full"
-    width="100"
-    src="/ivan.jpg"
-    alt="Ivan Ortega foto"
-    loading="lazy"
-  />
-  <nav class="flex gap-6 text-2xl font-medium">
+---
+import FotoPerfil from "./FotoPerfil.astro";
+---
+
+<header class="fixed text-xs top-0 flex w-full items-center justify-around py-4">
+  <FotoPerfil classname="w-14"/>
+  <nav class="flex gap-4">
     <a href="#inicio" class="hover:text-blue-400" href="">Inicio</a>
     <a href="#experiencia" class="hover:text-blue-400" href="">Experiencia</a>
     <a href="#proyectos" class="hover:text-blue-400" href="">Proyectos</a>

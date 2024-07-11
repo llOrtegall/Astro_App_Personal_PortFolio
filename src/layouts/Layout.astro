@@ -1,6 +1,6 @@
 ---
-import "@fontsource-variable/onest";
 import Header from "../components/Header.astro";
+import "@fontsource-variable/onest";
 
 interface Props {
 	title: string;
@@ -21,11 +21,9 @@ const { title, description } = Astro.props;
 		<title>{title}</title>
 </head>
 
-	<body class=" bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] bg-no-repeat bg-fixed w-fit sm:w-full relative">
+	<body class="w-full relative">
 		<Header />
-		<main class="w-full">
-			<slot />
-		</main>
+		<slot />
 	</body>
 </html>
 

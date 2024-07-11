@@ -16,8 +16,8 @@ import Header from "../components/Header.astro";
 	title="Porfolio de Ivan Ortega - Desarrollador y Programador Web"
 	description="contrata a Ivan Ortega como desarrollador web, backend, frontendh []stack, mern, react, node, express, mongodb"
 >
-
-	<section id="inicio" class="h-[95vh] flex flex-col px-96">
+	<main class="flex flex-col w-full h-full mt-64 gap-64">
+		<section id="inicio" class="h-[85vh] px-96 text-3xl flex flex-col gap-12">
 			<h1 class="flex flex-col items-center gap-2">
 				<p>! Hola, Me llamo Ivan Ortega Garzón</p>
 				<a
@@ -30,7 +30,7 @@ import Header from "../components/Header.astro";
 				</a>
 			</h1>
 
-			<article class="w-full px-4 text-pretty text-base">
+			<article class="text-ellipsis">
 				<p>
 					<span class="text-yellow-200">
 						1 año de experiencia,
@@ -47,21 +47,22 @@ import Header from "../components/Header.astro";
 					Nginx, MySQL, OracleDB
 				</p>
 			</article>
-	</section>
+		</section>
 
-	<section id="experiencia" class="">
-		<h2 class="flex gap-2 items-center">
-			<BriefIcon class="" />
-			<p class="text-xl font-semibold pt-1">Experiencia Laboral</p>
-		</h2>
-		<Experiencia />
-	</section>
+		<section id="experiencia" class="h-[85vh] px-96 text-3xl flex flex-col gap-12">
+			<h2 class="flex gap-2 items-center">
+				<BriefIcon class="" />
+				<p class="text-xl font-semibold pt-1">Experiencia Laboral</p>
+			</h2>
+			<Experiencia />
+		</section>
 
-	<section id="proyectos" class="">
-		<h2 class="flex gap-2 items-center pb-4 px-4">
-			<Code class="size-8" />
-			<span class="pt-1">Proyectos Relizados</span>
-		</h2>
-		<Proyects />
-	</section>
+		<section id="proyectos" class="h-[85vh] px-96 text-3xl flex flex-col gap-12">
+			<h2 class="flex gap-2 items-center pb-4 px-4">
+				<Code class="size-8" />
+				<span class="pt-1">Proyectos Relizados</span>
+			</h2>
+			<Proyects />
+		</section>
+	</main>
 </Layout>
