@@ -21,10 +21,11 @@ const EXPERIENCIE = [
 ]
 ---
 
-<ol class="flex flex-col gap-10 ">
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
   {
     EXPERIENCIE.map((item) => (
-      <li class="">
+      <li class="mb-10 ms-4">
         <ExperienciaItem {...item} />
       </li>
     ))

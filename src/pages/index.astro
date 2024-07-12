@@ -1,4 +1,5 @@
 ---
+import SectionContainer from "../components/SectionCountainer.astro";
 import BriefIcon from "../components/Icons/BriefIcon.astro";
 import SocialIcons from "../components/SocialIcons.astro";
 import LinkedIn from "../components/Icons/LinkedIn.astro";
@@ -9,27 +10,63 @@ import Mail from "../components/Icons/Mail.astro";
 import Code from "../components/Icons/Code.astro";
 import Badge from "../components/Badge.astro";
 import Layout from "../layouts/Layout.astro";
+import ExperienciaItem from "../components/ExperienciaItem.astro";
 ---
 
 <Layout
-	title="Porfolio de Ivan Ortega - Desarrollador y Programador Web"
-	description="contrata a Ivan Ortega como desarrollador web, backend, frontendh []stack, mern, react, node, express, mongodb"
+	title="Porfolio de Ivan Ortega - Desarrollador y Programador Web con 1 año de experiencia"
+	description="contrata a Ivan Ortega como desarrollador web, backend, frontend stack, mern, react, node, express, mongodb, mysql, oracle, docker, git, github, nginx"
 >
 	<main>
-		<section class="w-full mx-auto lg:w-[740px] py-44">
-			<h1 class="text-white text-5xl font-bold flex flex-row justify-center gap-x-4 pb-2">
-				! Hola, Me llamo Ivan Ortega Garzón 
-				<div class="flex justify-center items-center">
+		<SectionContainer>
+			<h1
+				class="text-white text-5xl font-bold flex flex-row justify-center gap-x-4 pb-4"
+			>
+				! Hola, Me llamo Ivan Ortega Garzón
+				<a
+					href="https://www.linkedin.com/in/llortegall/"
+					target="_blank"
+					class="flex justify-center items-center"
+				>
 					<Badge>Disponible Para Desarrollar.</Badge>
-				</div>
+				</a>
 			</h1>
 
 			<h2 class="text-xl">
 				1 año de experiencia, Desarrollador Full Stack, Me especializo en
-				construción de Aplicaciones Web implementando el stack MERN MongoDB,
-				Express, React, Node.js. No obstante, tengo experiencia con diferentes
+				construción de Aplicaciones Web implementando el stack
+				<span class="text-green-500">M</span>
+				<span class="text-orange-400">E</span>
+				<span class="text-blue-400">R</span>
+				<span class="text-green-300">N</span>
+				MongoDB, Express, React, Node.js. No obstante, tengo experiencia con diferentes
 				tecnologías como: Docker, Git + GitHub, Nginx, MySQL, OracleDB
 			</h2>
-		</section>
+
+			<nav>
+				<ul class="flex gap-x-2 pt-6">
+					<SocialIcons href="https://www.linkedin.com/in/llortegall/">
+						<LinkedIn class="size-6" />
+						LinkedIn
+					</SocialIcons>
+					<SocialIcons href="https://github.com/llOrtegall">
+						<GitHub class="size-6" />
+						GitHub
+					</SocialIcons>
+					<SocialIcons>
+						<Mail class="size-6" />
+						IvanOrtega_97@hotmail.com
+					</SocialIcons>
+				</ul>
+			</nav>
+		</SectionContainer>
+
+		<SectionContainer>
+			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+				<BriefIcon />	
+				Experiencia
+			</h1>
+			<Experiencia />
+		</SectionContainer>	
 	</main>
 </Layout>
