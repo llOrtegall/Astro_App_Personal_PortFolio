@@ -3,26 +3,67 @@ import ExperienciaItem from "./ExperienciaItem.astro";
 
 const EXPERIENCIE = [
   {
-    title: "Analista De Aplicaciones Web",
-    company: "Grupo Empresarial Multired S.A",
-    description:
-      "-> Desarrollo y mantenimiento de aplicaciones web, Implementación inicial de API REST para acceder a datos internos de la compañía. Creación de aplicaciones web responsivas. Inicialización de contenedores Docker para el despliegue de aplicaciones y/o micro servicios coorporativos",
-    date: "2023 - Actualidad",
-    tecnologias: ["JavaScript", "Node", "React", "Docker", "Express", "Mysql", "TypeScript", "Nginx"],
-  },
-  {
     title: "Técnico de Soporte y Mantenimiento",
     company: "Grupo Empresarial Multired S.A",
     description:
       "-> Soporte técnico remoto y presencial a usuarios internos y externos, mantenimiento de equipos de cómputo, instalación de software, configuración de redes, configuración de impresoras, configuración de dispositivos móviles, testeo de aplicaciones web y móviles.",
     date: "2020 - 2023",
     tecnologias: ["Windows", "Linux", "Android", "shell/bash"],
-  }
-]
+  },
+];
 ---
 
-
 <ol class="relative border-s border-gray-200 dark:border-gray-700">
+  <div class="experience-description">
+    <div
+      class="absolute w-3 h-3 bg-gray-200 rounded-full mt-8 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+    >
+    </div>
+    <time class="">💻 2023 / 01 / 10 - Actualmente.</time>
+    <h2 class="text-2xl font-semibold text-gray-200">
+      Compañia: Grupo Empresarial Multired S.A
+    </h2>
+    <h3 class="text-sm font-semibold text-blue-500 text-pretty py-2">
+      Analista De Aplicaciones
+    </h3>
+    <ul class="experience-list pt-2">
+      <li>
+        Desarrollo y mantenimiento de aplicaciones web, Implementación API REST
+        con la finalidad de acceder a datos internos de la compañía.
+      </li>
+
+      <li>Creación de aplicaciones web responsivas.</li>
+
+      <li>
+        Inicialización de contenedores Docker: (Docker compose) desplegando
+        servicios como:
+        <ul class="sub-list">
+          <li>Databases</li>
+          <li>Web Servers</li>
+          <li>Monitoring Tools (Grafana)</li>
+          <li>Applications Servers</li>
+        </ul>
+      </li>
+
+      <li>
+        Administración de base de datos:
+        <ul class="sub-list">
+          <li>Mysql</li>
+          <li>Oracle</li>
+          <li>MongoDB</li>
+        </ul>
+      </li>
+
+      <li>
+        Creación del flujo de trabajo de CI/CD con Jenkins para el despliegue de
+        aplicaciones web.
+      </li>
+
+      <li>Creación de scripts de automatización de tareas con Node.js.</li>
+
+      <li>Creación de aplicaciones web con React.js.</li>
+    </ul>
+  </div>
   {
     EXPERIENCIE.map((item) => (
       <li class="mb-10 ms-4">
@@ -31,3 +72,30 @@ const EXPERIENCIE = [
     ))
   }
 </ol>
+
+<style>
+  .experience-description {
+    padding: 1rem;
+  }
+  .experience-list {
+    list-style: none;
+    padding-left: 1rem;
+  }
+  .experience-list > li {
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  .experience-list > li:before {
+    content: "→";
+    position: absolute;
+    left: -1rem;
+  }
+  .sub-list {
+    list-style: disc;
+    padding-left: 2rem;
+    margin-top: 0.5rem;
+  }
+  .sub-list li {
+    margin-bottom: 0.25rem;
+  }
+</style>
