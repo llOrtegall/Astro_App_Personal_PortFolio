@@ -1,5 +1,4 @@
 ---
-import SectionContainer from "../components/SectionCountainer.astro";
 import BriefIcon from "../components/Icons/BriefIcon.astro";
 import SocialIcons from "../components/SocialIcons.astro";
 import LinkedIn from "../components/Icons/LinkedIn.astro";
@@ -8,9 +7,7 @@ import GitHub from "../components/Icons/GitHub.astro";
 import Proyects from "../components/Proyects.astro";
 import Mail from "../components/Icons/Mail.astro";
 import Code from "../components/Icons/Code.astro";
-import Badge from "../components/Badge.astro";
 import Layout from "../layouts/Layout.astro";
-import ExperienciaItem from "../components/ExperienciaItem.astro";
 ---
 
 <Layout
@@ -18,9 +15,12 @@ import ExperienciaItem from "../components/ExperienciaItem.astro";
 	description="contrata a Ivan Ortega como desarrollador web, backend, frontend stack, mern, react, node, express, mongodb, mysql, oracle, docker, git, github, nginx"
 >
 	<main>
-		<SectionContainer id="inicio" className="py-44">
+		<div
+			id="inicio"
+			class="w-[750px] h-screen mx-auto flex flex-col justify-center"
+		>
 			<h1
-				class="text-white text-5xl font-bold flex flex-row justify-center gap-x-4 pb-4"
+				class="text-white text-5xl font-bold flex flex-row justify-center gap-x-4 pb-4 text-balance"
 			>
 				! Hola, Me llamo Ivan Ortega Garzón
 			</h1>
@@ -28,12 +28,14 @@ import ExperienciaItem from "../components/ExperienciaItem.astro";
 			<a
 				href="https://www.linkedin.com/in/llortegall/"
 				target="_blank"
-				class=""
-			>
+				class=">
 				<Badge>Disponible Para Desarrollar.</Badge>
 			</a>
-
-			<h2 class="text-xl text-pretty mt-3">
+			<h2 class="
+				text-xl
+				text-pretty
+				mt-3'
+			>
 				Desarrollador Web Full Stack con 1 año de experiencia. Especializado en
 				el desarrollo, despliegue y mantenimiento de aplicaciones web utilizando
 				tecnologías como
@@ -44,7 +46,7 @@ import ExperienciaItem from "../components/ExperienciaItem.astro";
 				con herramientas y tecnologías como Docker, Git, Nginx, OracleDB,
 				MongoDB, GitHub y Jenkins. Mis lenguajes de programación principales son
 				TypeScript, Python y Java.
-			</h2>
+			</a>
 
 			<nav>
 				<ul class="flex gap-x-2 pt-6">
@@ -62,22 +64,22 @@ import ExperienciaItem from "../components/ExperienciaItem.astro";
 					</SocialIcons>
 				</ul>
 			</nav>
-		</SectionContainer>
+		</div>
 
-		<SectionContainer id="experiencia" className="py-16">
+		<div id="experiencia" class="w-[750px] min-h-screen mx-auto">
 			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
 				<BriefIcon />
 				Experiencia
 			</h1>
 			<Experiencia />
-		</SectionContainer>
+		</div>
 
-		<SectionContainer id="proyectos" className="py-44">
+		<div id="proyectos" class="w-[750px] min-h-screen mx-auto flex flex-col">
 			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
 				<Code />
 				Proyectos
 			</h1>
 			<Proyects />
-		</SectionContainer>
+		</div>
 	</main>
 </Layout>

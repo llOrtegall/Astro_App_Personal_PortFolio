@@ -2,6 +2,7 @@
 import GitHub from "../components/Icons/GitHub.astro";
 import Carrousel from "./Carrousel.astro";
 import Badge from "./Badge.astro";
+import Link from "./Icons/Link.astro";
 
 const BodegaStock = [
   {
@@ -9,7 +10,7 @@ const BodegaStock = [
     description:
       "Sistema integral de gestión y trazabilidad de activos empresariales que automatiza el control de inventarios, seguimiento de movimientos y generación de reportes analíticos para la optimización de recursos e insumos corporativos",
     img: ["/11.png", "/12.png", "/13.png", "/14.png"],
-    url: "#",
+    url: "https://github.com/llOrtegall/app-bodega-stock",
     github: "https://github.com/llOrtegall/app-bodega-stock",
     tags: [
       "TypeScript",
@@ -33,7 +34,7 @@ const BodegaStock = [
 ];
 ---
 
-<section class="px-4">
+<section class="p-4">
   {
     BodegaStock.map((proyec) => (
       <div>
@@ -43,22 +44,33 @@ const BodegaStock = [
           </h1>
           <p>{proyec.description}</p>
 
-          <nav class="flex gap-4 pt-4">
+          <nav class="flex py-4 gap-4">
             <a
+              class="flex items-center rounded-full border bg-gray-900 border-white/10 justify-center gap-x-2 py-2 px-4 hover:scale-110 transition hover:bg-blue-400"
+              target="_blank"
+              rel="noopener noreferrer"
               href={proyec.github}
-              class="flex items-center gap-4 boder-2 border-gray-200 p-2 rounded-md"
             >
-              <GitHub class="size-10" />
+              <GitHub class="size-6" />
               <p>Codigo GitHub</p>
             </a>
 
-            <div class="flex flex-wrap gap-2 items-center">
-              <p>Tecnologías Utilizadas:</p>
-              {proyec.tags.map((tag) => (
-                <span class="text-yellow-600">{tag}</span>
-              ))}
-            </div>
+            <a
+              class="flex items-center rounded-full border bg-gray-900 border-white/10 justify-center gap-x-2 py-2 px-4 hover:scale-110 transition hover:bg-blue-400"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={proyec.url}
+            >
+              <Link class="size-6" />
+              <p>Ver Proyecto</p>
+            </a>
           </nav>
+          <div class="flex flex-wrap gap-2 items-center">
+            <p>Tecnologías Utilizadas:</p>
+            {proyec.tags.map((tag) => (
+              <span class="text-yellow-600">{tag}</span>
+            ))}
+          </div>
         </article>
         <Carrousel imagenes={proyec.img} />
       </div>
