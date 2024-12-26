@@ -1,57 +1,86 @@
 ---
 interface Props {
-  imagenes: string[]
+  imagenes: string[];
 }
 
-const { imagenes } = Astro.props
+const { imagenes } = Astro.props;
 ---
 
 <style>
   .container {
-    height: auto;
     width: 100%;
-    display: grid;
-    place-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
   }
 
-  .slide{
-    width: 100vw;
-    max-width: 1000px;
-    height: 720px;
+  .slide {
+    width: 100%;
+    height: auto;
     overflow: hidden;
     border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
   }
 
-  .slide ul{
+  .slide ul {
     display: flex;
     padding: 0;
+    margin: 0;
     width: 400%;
-
+    list-style: none;
     animation: slide 25s infinite cubic-bezier(0.55, 0.48, 0.37, 0.92);
   }
 
+  .slide ul li {
+    width: 25%;
+    list-style: none;
+  }
+
+  .slide ul li img {
+    width: 100%;
+    height: 500px;
+    object-fit: scale-down;
+    object-position: center;
+  }
+
   @keyframes slide {
-    0% { margin-left: 0;}
-    20% { margin-left: 0;}
+    0% {
+      margin-left: 0;
+    }
+    20% {
+      margin-left: 0;
+    }
 
-    25% { margin-left: -100%;}
-    45% { margin-left: -100%;}
+    25% {
+      margin-left: -100%;
+    }
+    45% {
+      margin-left: -100%;
+    }
 
-    50% { margin-left: -200%;}
-    70% { margin-left: -200%;}
+    50% {
+      margin-left: -200%;
+    }
+    70% {
+      margin-left: -200%;
+    }
 
-    75% { margin-left: -300%;}
-    100% { margin-left: -300%;}
+    75% {
+      margin-left: -300%;
+    }
+    100% {
+      margin-left: -300%;
+    }
   }
 </style>
 
-<div class="container pt-4">
+<div class="container">
   <div class="slide">
     <ul>
       {
-        imagenes.map( img => (
-          <li> 
-            <img src={img} alt="" />  
+        imagenes.map((img) => (
+          <li>
+            <img src={img} alt="Imagen del carrusel" />
           </li>
         ))
       }

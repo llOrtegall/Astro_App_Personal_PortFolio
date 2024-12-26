@@ -1,17 +1,14 @@
 ---
-import Github from "../components/Icons/GitHub.astro";
-import Link from "../components/Icons/Link.astro";
+import GitHub from "../components/Icons/GitHub.astro";
 import Carrousel from "./Carrousel.astro";
 import Badge from "./Badge.astro";
-import SocialIcons from "./SocialIcons.astro";
-import GitHub from "../components/Icons/GitHub.astro";
 
 const BodegaStock = [
   {
     title: "Bodega Stock Soporte",
     description:
-      "Proyecto desarrollado con la finalidad de crear un sistema de gestión de inventario y generación de movimientos, que permita el seguimiento de activos e insumos de la compañía, brindando trazabilidad y generando reportes automatizados",
-    img: ["/01.webp", "/02.webp", "/03.webp", "/04.webp"],
+      "Sistema integral de gestión y trazabilidad de activos empresariales que automatiza el control de inventarios, seguimiento de movimientos y generación de reportes analíticos para la optimización de recursos e insumos corporativos",
+    img: ["/11.png", "/12.png", "/13.png", "/14.png"],
     url: "#",
     github: "https://github.com/llOrtegall/app-bodega-stock",
     tags: [
@@ -21,8 +18,17 @@ const BodegaStock = [
       "Express",
       "MongoDB",
       "Docker",
-      "Nginx"
+      "Nginx",
     ],
+  },
+  {
+    title: "Shopping Cart",
+    description:
+      "Aplicación de carrito de compras con funcionalidades de agregar, eliminar y modificar productos en tiempo real",
+    img: ["/21.png", "/22.png", "/23.png"],
+    url: "https://shoppingcartortega.netlify.app",
+    github: "https://github.com/llOrtegall/React_App_Ecommerce",
+    tags: ["TypeScript", "React", "API Platzi", "Tailwind CSS"],
   },
 ];
 ---
@@ -37,11 +43,14 @@ const BodegaStock = [
           </h1>
           <p>{proyec.description}</p>
 
-          <nav class="flex flex-col md:flex-row px-4 md:px-0 gap-y-2 lg:gap-x-8 mt-6">
-            <SocialIcons href={proyec.github}>
-              <GitHub class="size-6" />
-              Codigo GitHub
-            </SocialIcons>
+          <nav class="flex gap-4 pt-4">
+            <a
+              href={proyec.github}
+              class="flex items-center gap-4 boder-2 border-gray-200 p-2 rounded-md"
+            >
+              <GitHub class="size-10" />
+              <p>Codigo GitHub</p>
+            </a>
 
             <div class="flex flex-wrap gap-2 items-center">
               <p>Tecnologías Utilizadas:</p>
