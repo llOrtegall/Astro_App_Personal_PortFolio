@@ -3,11 +3,30 @@ import ExperienciaItem from "./ui/ExperienceItem.astro";
 
 const EXPERIENCIE = [
     {
+        title: "Analista De Aplicaciones",
+        company: "Grupo Empresarial Multired S.A",
+        description:
+            "Desarrollo y mantenimiento de aplicaciones web Full Stack utilizando TypeScript, React, NodeJS, Express y Tailwind CSS. Implementación y gestión de servicios en contenedores Docker (Docker Compose), incluyendo bases de datos, servidores web y herramientas de monitoreo como Grafana. Administración de bases de datos (MySQL, Oracle, MongoDB) y creación de flujos CI/CD con Jenkins para el despliegue eficiente de aplicaciones.",
+        date: "10/11/2023 --- 11/07/2025",
+        tecnologias: [
+            "NextJS",
+            "TypeScript",
+            "NodeJS",
+            "Express",
+            "Tailwind CSS",
+            "Docker",
+            "MySQL",
+            "Oracle",
+            "MongoDB",
+            "Jenkins",
+        ],
+    },
+    {
         title: "Técnico de Soporte y Mantenimiento",
         company: "Grupo Empresarial Multired S.A",
         description:
             "-> Soporte técnico remoto y presencial a usuarios internos y externos, mantenimiento de equipos de cómputo, instalación de software, configuración de redes, configuración de impresoras, configuración de dispositivos móviles, testeo de aplicaciones web y móviles.",
-        date: "2020 - 2023",
+        date: "2020 --- 2023",
         tecnologias: ["Windows", "Linux", "Android", "shell/bash"],
     },
 ];
@@ -15,59 +34,6 @@ const EXPERIENCIE = [
 
 <div id="inicio">
     <ol class="relative border-s border-gray-200 dark:border-gray-700">
-        <div class="experience-description">
-            <div
-                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-8 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
-            >
-            </div>
-            <time class="">💻 10/11/2023 - Actualmente.</time>
-            <h2 class="text-2xl font-semibold text-gray-200">
-                Compañia: Grupo Empresarial Multired S.A
-            </h2>
-            <h3 class="text-sm font-semibold text-blue-500 text-pretty py-2">
-                Analista De Aplicaciones
-            </h3>
-            <ul class="experience-list pt-2">
-                <li>
-                    Desarrollo y mantenimiento de aplicaciones Web - Full Stack
-                    con tecnologías como:
-                    <ul class="sub-list">
-                        <li class="text-yellow-200">TypeScript</li>
-                        <li class="text-yellow-200">React</li>
-                        <li class="text-yellow-200">NodeJS</li>
-                        <li class="text-yellow-200">Express</li>
-                        <li class="text-yellow-200">Tailwind CSS</li>
-                    </ul>
-                </li>
-
-                <li>
-                    Inicialización de contenedores Docker: (Docker compose)
-                    desplegando servicios como:
-                    <ul class="sub-list">
-                        <li class="text-yellow-200">Databases</li>
-                        <li class="text-yellow-200">Web Servers</li>
-                        <li class="text-yellow-200">
-                            Monitoring Tools (Grafana)
-                        </li>
-                        <li class="text-yellow-200">Applications Servers</li>
-                    </ul>
-                </li>
-
-                <li>
-                    Administración de base de datos:
-                    <ul class="sub-list">
-                        <li class="text-yellow-200">Mysql</li>
-                        <li class="text-yellow-200">Oracle</li>
-                        <li class="text-yellow-200">MongoDB</li>
-                    </ul>
-                </li>
-
-                <li>
-                    Creación del flujo de trabajo de CI/CD con Jenkins para el
-                    despliegue de aplicaciones web.
-                </li>
-            </ul>
-        </div>
         {
             EXPERIENCIE.map((item) => (
                 <li class="mb-10 ms-4">
