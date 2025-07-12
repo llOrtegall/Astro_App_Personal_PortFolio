@@ -13,15 +13,9 @@ import Header from "../components/ui/Header.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body class="items-center justify-center h-screen overflow-y-auto">
-		<div
-			class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
-		>
-		</div>
+	<body class="bg-gradient-to-b from-gray-950 to-slate-900 text-white">
 		<Header />
-		<main class="flex flex-col items-center justify-center py-44">
-			<slot />
-		</main>
+		<slot />
 	</body>
 </html>
 
