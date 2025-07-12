@@ -1,6 +1,7 @@
 ---
 import "@fontsource-variable/onest";
 import Header from "../components/ui/Header.astro";
+import Footer from "../components/ui/Footer.astro";
 ---
 
 <!doctype html>
@@ -16,6 +17,7 @@ import Header from "../components/ui/Header.astro";
 	<body class="bg-gradient-to-b from-gray-950 to-slate-900 text-white">
 		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
 
@@ -23,6 +25,13 @@ import Header from "../components/ui/Header.astro";
 	:root {
 		color-scheme: light dark;
 		background: #050505;
+		scroll-behavior: smooth;
+	}
+
+	@media(prefers-reduced-motion: reduce) {
+		html{
+			scroll-behavior: auto;
+		}
 	}
 
 </style>

@@ -2,6 +2,8 @@
 import Presentacion from "../components/Presentacion.astro";
 import Experience from "../components/Experience.astro";
 import Container from "../components/ui/Container.astro";
+import Proyectos from "../components/Proyectos.astro";
+import Contacto from "../components/Contacto.astro";
 import SobreMi from "../components/Sobremi.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -10,10 +12,16 @@ import Layout from "../layouts/Layout.astro";
     <Container>
         <Presentacion />
     </Container>
-    <Container>
+    <Container id="experiencia">
         <Experience />
     </Container>
-    <Container>
+    <Container id="sobremi">
         <SobreMi />
+    </Container>
+    <Container id="proyectos">
+        <Proyectos />
+    </Container>
+    <Container id="contacto">
+        <Contacto />
     </Container>
 </Layout>
