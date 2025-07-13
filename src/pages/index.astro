@@ -1,85 +1,27 @@
 ---
-import BriefIcon from "../components/Icons/BriefIcon.astro";
-import SocialIcons from "../components/SocialIcons.astro";
-import LinkedIn from "../components/Icons/LinkedIn.astro";
-import Experiencia from "../components/Experiencia.astro";
-import GitHub from "../components/Icons/GitHub.astro";
-import Proyects from "../components/Proyects.astro";
-import Mail from "../components/Icons/Mail.astro";
-import Code from "../components/Icons/Code.astro";
+import Presentacion from "../components/Presentacion.astro";
+import Experience from "../components/Experience.astro";
+import Container from "../components/ui/Container.astro";
+import Proyectos from "../components/Proyectos.astro";
+import Contacto from "../components/Contacto.astro";
+import SobreMi from "../components/Sobremi.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout
-	title="Porfolio de Ivan Ortega - Desarrollador y Programador Web con 2 años de experiencia"
-	description="contrata a Ivan Ortega como desarrollador web, backend, frontend stack, mern, react, node, express, mongodb, mysql, oracle, docker, git, github, nginx"
->
-	<main>
-		<div
-			id="inicio"
-			class="w-[750px] h-screen mx-auto flex flex-col justify-center"
-		>
-			<h1
-				class="text-white text-5xl font-bold flex flex-row justify-center gap-x-4 pb-4 text-balance"
-			>
-				! Hola, Me llamo Ivan Ortega Garzón
-			</h1>
-
-			<a
-				href="https://www.linkedin.com/in/llortegall/"
-				target="_blank"
-				class=">
-				<Badge>Disponible Para Desarrollar.</Badge>
-			</a>
-			<h2 class="
-				text-xl
-				text-pretty
-				mt-3'
-			>
-				Desarrollador Web Full Stack con 2 años de experiencia laboral. Especializado en
-				el desarrollo, despliegue y mantenimiento de aplicaciones web utilizando
-				tecnologías como
-				<span class="text-red-500">Mysql</span>
-				<span class="text-blue-500">React</span>
-				<span class="text-orange-400">Node</span>
-				<span class="text-green-500">Express</span>, Además, tengo experiencia
-				con herramientas y tecnologías como Docker, Git, Nginx, OracleDB,
-				MongoDB, GitHub y Jenkins. Mis lenguajes de programación principales son
-				TypeScript, Python y Java.
-			</a>
-
-			<nav>
-				<ul class="flex gap-x-2 pt-6">
-					<SocialIcons href="https://www.linkedin.com/in/llortegall/">
-						<LinkedIn class="size-6" />
-						LinkedIn
-					</SocialIcons>
-					<SocialIcons href="https://github.com/llOrtegall">
-						<GitHub class="size-6" />
-						GitHub
-					</SocialIcons>
-					<SocialIcons href="mailto:IvanOrtega_97@hotmail.com">
-						<Mail class="size-6" />
-						IvanOrtega_97@hotmail.com
-					</SocialIcons>
-				</ul>
-			</nav>
-		</div>
-
-		<div id="experiencia" class="w-[750px] min-h-screen mx-auto">
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
-				<BriefIcon />
-				Experiencia
-			</h1>
-			<Experiencia />
-		</div>
-
-		<div id="proyectos" class="w-[750px] min-h-screen mx-auto flex flex-col">
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
-				<Code />
-				Proyectos
-			</h1>
-			<Proyects />
-		</div>
-	</main>
+<Layout>
+    <Container>
+        <Presentacion />
+    </Container>
+    <Container id="experiencia">
+        <Experience />
+    </Container>
+    <Container id="sobremi">
+        <SobreMi />
+    </Container>
+    <!-- <Container id="proyectos">
+        <Proyectos />
+    </Container> -->
+    <Container id="contacto" class="mt-24">
+        <Contacto />
+    </Container>
 </Layout>

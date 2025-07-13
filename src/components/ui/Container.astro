@@ -1,0 +1,13 @@
+---
+const { class: className = "", id } = Astro.props;
+
+// Contenedor flexible para proyectos, que necesita más altura
+const isProjectsSection = id === "proyectos";
+const containerClasses = isProjectsSection 
+  ? `w-[750px] min-h-screen mx-auto flex flex-col justify-start py-16 ${className}`
+  : `w-[750px] h-screen mx-auto flex flex-col justify-center ${className}`;
+---
+
+<section class={containerClasses} id={id}>
+    <slot />
+</section>
