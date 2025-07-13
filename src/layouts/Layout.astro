@@ -16,7 +16,9 @@ import Footer from "../components/ui/Footer.astro";
 	</head>
 	<body class="bg-gradient-to-b from-gray-950 to-slate-900 text-white">
 		<Header />
-		<slot />
+		<main>
+			<slot />
+		</main>
 		<Footer />
 	</body>
 </html>
@@ -28,10 +30,9 @@ import Footer from "../components/ui/Footer.astro";
 		scroll-behavior: smooth;
 	}
 
-	@media(prefers-reduced-motion: reduce) {
-		html{
+	@media (prefers-reduced-motion: reduce) {
+		html {
 			scroll-behavior: auto;
 		}
 	}
-
 </style>
