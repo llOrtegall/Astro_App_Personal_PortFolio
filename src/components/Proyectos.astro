@@ -1,25 +1,14 @@
 ---
 const PROJECTS = [
-    {   
-        id: 1,
-        title: "Sistema de Gestión Empresarial",
-        description: "Aplicación web completa para la gestión de procesos empresariales con dashboard interactivo, reportes en tiempo real y sistema de autenticación robusto.",
-        link: "#",
-        github: "#",
-        image: "/images/project1.jpg",
-        technologies: ["NextJS", "TypeScript", "NodeJS", "MySQL"],
-        status: "En producción",
-        featured: true,
-    },
     {
-        id: 2,
-        title: "API REST Microservicios",
-        description: "Arquitectura de microservicios escalable con contenedores Docker, implementación CI/CD y monitoreo con Grafana para alta disponibilidad.",
-        link: "#",
-        github: "#",
-        image: "/images/project2.jpg",
-        technologies: ["NodeJS", "Express", "Docker", "Jenkins"],
-        status: "Completado",
+        id: 1,
+        title: "App Chat Free Easy",
+        description: "Plataforma de mensajería en tiempo real autenticación AuthJS - Providers (Google, Github). He desplegado en mi VPS Privado usando Docker y NPM para realizar por proxy reverse",
+        link: "https://chat-free.apps-ortega.cloud",
+        github: "https://github.com/llOrtegall/chat_free_easy",
+        image: "chat-free.png",
+        technologies: ["NextJS-15", "TypeScript", "NodeJS", "WebSocket", "TailwindCSS", "AuthJS", "Docker", "NPM"],
+        status: "En producción",
         featured: true,
     }
 ];
@@ -56,14 +45,21 @@ const PROJECTS = [
               <div class="grid md:grid-cols-2 min-h-[200px]">
                   
                   <div class="relative overflow-hidden h-48 md:h-auto bg-gradient-to-br from-gray-700 to-gray-900">
-                      <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent z-10"></div>
-                      
-                      <div class="w-full h-full flex items-center justify-center text-gray-500">
-                          <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
-                              <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd" />
-                          </svg>
-                      </div>
-                      
+                      {project.image ? (
+                          <img 
+                              src={project.image} 
+                              alt={`Imagen del proyecto ${project.title}`} 
+                              class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-300" 
+                              loading="lazy"
+                          />
+                      ) : (
+                          <div class="w-full h-full flex items-center justify-center text-gray-500">
+                              <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd" />
+                              </svg>
+                          </div>
+                      )}
+                      <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent z-10"></div>
                       <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div> 
 
