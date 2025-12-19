@@ -3,49 +3,75 @@ import ExperienciaItem from "./ui/ExperienceItem.astro";
 
 const EXPERIENCIE = [
   {
-    title: "Analista De Aplicaciones",
+    title: "Backend Developer - Freelance",
+    company: "Freelance / Proyectos Personales",
+    description:
+      "• Desarrollo de plataforma full-stack para compartir archivos usando Cloudflare R2 con URLs pre-firmadas y subidas directas desde el navegador.\n• Implementación de web scraper headless con Puppeteer para automatización de extracción de contenido multimedia, incluyendo grabación de audio en tiempo real con FFmpeg.\n• Arquitectura de APIs REST con autenticación JWT, validación con Zod y ORMs (Sequelize) sobre PostgreSQL.\n• Containerización completa con Docker y orquestación mediante Docker Compose con Nginx como reverse proxy.\n• Desarrollo de SPAs modernas con React 19, TypeScript, Vite y Tailwind CSS con componentes Radix UI.\n• Implementación de pipelines de CI/CD y buenas prácticas de desarrollo (Clean Code, SOLID).\n• Gestión de infraestructura cloud (Cloudflare R2) y configuración de servidores Linux.",
+    date: "Jul 2025 --- Actualidad",
+    tecnologias: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Bun",
+      "Express",
+      "PostgreSQL",
+      "Puppeteer",
+      "Docker",
+      "Cloudflare R2",
+      "Nginx",
+      "FFmpeg",
+    ],
+  },
+  {
+    title: "Analista De Aplicaciones - Backend Developer",
     company: "Grupo Empresarial Multired S.A",
     description:
-      "Desarrollo y mantenimiento de aplicaciones web Full Stack utilizando TypeScript, React, NodeJS, Express y Tailwind CSS. Implementación y gestión de servicios en contenedores Docker (Docker Compose), incluyendo bases de datos, servidores web y herramientas de monitoreo como Grafana. Administración de bases de datos (MySQL, Oracle, MongoDB) y creación de flujos CI/CD con Jenkins para el despliegue eficiente de aplicaciones.",
-    date: "10/11/2023 --- 11/07/2025",
+      "• Desarrollo de APIs RESTful con Node.js, Express y TypeScript para sistemas empresariales de alta disponibilidad.\n• Diseño e implementación de arquitecturas backend escalables con microservicios dockerizados.\n• Gestión y optimización de bases de datos relacionales (MySQL, Oracle) y NoSQL (MongoDB).\n• Implementación de pipelines CI/CD con Jenkins para automatización de despliegues.\n• Containerización de servicios con Docker Compose y gestión de infraestructura.\n• Monitoreo y análisis de rendimiento con Grafana y logging centralizado.\n• Desarrollo de integraciones con sistemas legacy y APIs de terceros.",
+    date: "Nov 2023 --- Jul 2025",
     tecnologias: [
-      "NextJS",
+      "Node.js",
       "TypeScript",
-      "NodeJS",
       "Express",
-      "Tailwind CSS",
-      "Docker",
       "MySQL",
       "Oracle",
       "MongoDB",
+      "Docker",
       "Jenkins",
+      "Grafana",
+      "REST APIs",
     ],
   },
   {
     title: "Técnico de Soporte y Mantenimiento",
     company: "Grupo Empresarial Multired S.A",
     description:
-      "-> Soporte técnico remoto y presencial a usuarios internos y externos, mantenimiento de equipos de cómputo, instalación de software, configuración de redes, configuración de impresoras, configuración de dispositivos móviles, testeo de aplicaciones web y móviles.",
+      "• Soporte técnico nivel 2 y 3 para usuarios internos y externos.\n• Administración de servidores Linux y Windows.\n• Configuración de redes, servicios y dispositivos corporativos.\n• Testing de aplicaciones web y móviles en diferentes entornos.\n• Resolución de incidencias mediante scripting (bash/shell).\n• Documentación técnica de procedimientos y soluciones.",
     date: "2020 --- 2023",
-    tecnologias: ["Windows", "Linux", "Android", "shell/bash"],
+    tecnologias: ["Linux", "Windows Server", "Networking", "Bash/Shell", "Troubleshooting"],
   },
 ];
 ---
 
-<div id="inicio">
-  <h1 class="text-4xl text-center font-bold pb-12 text-blue-600">
-    Experiencia Laboral
-  </h1>
-  <ol class="relative border-s border-gray-200 dark:border-gray-700">
+<section id="inicio" class="max-w-5xl mx-auto">
+  <!-- Título de la sección -->
+  <div class="text-center mb-12">
+    <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-3">
+      Experiencia Laboral
+    </h1>
+    <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto rounded-full"></div>
+  </div>
+
+  <!-- Timeline -->
+  <ol class="relative border-s-2 border-gradient-to-b from-blue-500 via-purple-500 to-pink-500 ml-4 md:ml-8">
     {
-      EXPERIENCIE.map((item) => (
-        <li class="mb-10 ms-4">
-          <ExperienciaItem {...item} />
+      EXPERIENCIE.map((item, index) => (
+        <li class="mb-12 ms-6 md:ms-10 group">
+          <ExperienciaItem {...item} index={index} />
         </li>
       ))
     }
   </ol>
-</div>
+</section>
 
 <style>
   .experience-description {
