@@ -6,21 +6,23 @@ import Mail from "../components/icons/Mail.astro";
 import Badge from "../components/ui/Badge.astro";
 ---
 
-<section id="inicio">
+<section id="inicio" class="px-4 sm:px-6 lg:px-8">
     <!-- Título principal -->
     <h1
-        class="text-white text-5xl md:text-6xl font-bold text-center pb-2 text-balance leading-tight"
+        class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center pb-2 text-balance leading-tight"
     >
         Ivan Ortega Garzón
     </h1>
 
     <!-- Subtítulo profesional -->
-    <h2 class="text-2xl md:text-3xl text-center text-gray-300 font-light mb-2">
+    <h2
+        class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-center text-gray-300 font-light mb-3 sm:mb-4 px-2"
+    >
         Backend Developer | TypeScript Specialist & Java
     </h2>
 
     <!-- Estado disponible -->
-    <div class="flex justify-center mb-3">
+    <div class="flex justify-center mb-4 sm:mb-6">
         <a
             href="https://www.linkedin.com/in/llortegall/"
             target="_blank"
@@ -31,46 +33,86 @@ import Badge from "../components/ui/Badge.astro";
     </div>
 
     <!-- Propuesta de valor principal -->
-    <article class="max-w-4xl mx-auto space-y-6">
+    <article class="max-w-4xl mx-auto space-y-4 sm:space-y-6">
         <!-- Presentación principal -->
-        <div class="bg-linear-to-r from-gray-800/40 to-gray-700/40 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-xl">
-            <p class="text-lg text-gray-200 leading-relaxed text-pretty">
-                Desarrollador Backend con <span class="text-blue-400 font-semibold">+2 años de experiencia</span> 
-                construyendo <span class="text-purple-400 font-semibold">APIs REST escalables</span> con 
-                <span class="text-green-400 font-medium">Node.js, Express y TypeScript</span>. 
-                Especializado en arquitecturas orientadas a microservicios, bases de datos SQL/NoSQL, 
-                implementación de ORMs (Sequelize, Prisma) y despliegues automatizados con 
-                <span class="text-orange-400 font-medium">Docker y CI/CD</span>.
+        <div
+            class="bg-linear-to-r from-gray-800/40 to-gray-700/40 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-gray-700/50 shadow-xl"
+        >
+            <p
+                class="text-base sm:text-lg text-gray-200 leading-relaxed text-pretty"
+            >
+                Desarrollador Backend con <span
+                    class="text-blue-400 font-semibold"
+                    >+2 años de experiencia</span
+                >
+                construyendo <span class="text-purple-400 font-semibold"
+                    >APIs REST escalables</span
+                > con
+                <span class="text-green-400 font-medium"
+                    >Node.js, Express y TypeScript</span
+                >. Especializado en arquitecturas orientadas a microservicios,
+                bases de datos SQL implementación de ORMs (Sequelize,
+                Prisma) y despliegues automatizados con
+                <span class="text-orange-400 font-medium">Docker & CI/CD</span>.
             </p>
         </div>
 
         <!-- Stack secundario y enfoque -->
-        <div class="grid md:grid-cols-2 gap-4">
-            <div class="bg-gray-800/30 backdrop-blur-sm rounded-xl p-5 border border-gray-700/40 hover:border-blue-500/30 transition-colors">
-                <h3 class="text-sm font-semibold text-blue-400 mb-2 flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M13 7H7v6h6V7z"/>
-                        <path fill-rule="evenodd" d="M7 2a1 1 0 012 0v1h2V2a1 1 0 112 0v1h2a2 2 0 012 2v2h1a1 1 0 110 2h-1v2h1a1 1 0 110 2h-1v2a2 2 0 01-2 2h-2v1a1 1 0 11-2 0v-1H9v1a1 1 0 11-2 0v-1H5a2 2 0 01-2-2v-2H2a1 1 0 110-2h1V9H2a1 1 0 010-2h1V5a2 2 0 012-2h2V2zM5 5h10v10H5V5z" clip-rule="evenodd"/>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+            <div
+                class="bg-gray-800/30 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-5 border border-gray-700/40 hover:border-blue-500/30 transition-colors"
+            >
+                <h3
+                    class="text-sm font-semibold text-blue-400 mb-2 flex items-center gap-2"
+                >
+                    <svg
+                        class="w-4 h-4"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                    >
+                        <path d="M13 7H7v6h6V7z"></path>
+                        <path
+                            fill-rule="evenodd"
+                            d="M7 2a1 1 0 012 0v1h2V2a1 1 0 112 0v1h2a2 2 0 012 2v2h1a1 1 0 110 2h-1v2h1a1 1 0 110 2h-1v2a2 2 0 01-2 2h-2v1a1 1 0 11-2 0v-1H9v1a1 1 0 11-2 0v-1H5a2 2 0 01-2-2v-2H2a1 1 0 110-2h1V9H2a1 1 0 010-2h1V5a2 2 0 012-2h2V2zM5 5h10v10H5V5z"
+                            clip-rule="evenodd"></path>
                     </svg>
                     Stack Adicional
                 </h3>
                 <p class="text-sm text-gray-300 leading-relaxed">
-                    Conocimientos en <span class="text-red-400 font-medium">Java (OpenJDK + 17)</span> y 
-                    <span class="text-green-400 font-medium">Spring Boot + 3.5</span>, aplicando 
-                    buenas prácticas y patrones modernos de arquitectura.
+                    Conocimientos en <span class="text-red-400 font-medium"
+                        >Java (OpenJDK + 17)</span
+                    > y
+                    <span class="text-green-400 font-medium"
+                        >Spring Boot + 3.5</span
+                    >, aplicando buenas prácticas y patrones modernos de
+                    arquitectura. Mvc, RESTful APIs y seguridad con JWT.
                 </p>
             </div>
 
-            <div class="bg-gray-800/30 backdrop-blur-sm rounded-xl p-5 border border-gray-700/40 hover:border-purple-500/30 transition-colors">
-                <h3 class="text-sm font-semibold text-purple-400 mb-2 flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            <div
+                class="bg-gray-800/30 backdrop-blur-sm rounded-xl p-5 border border-gray-700/40 hover:border-purple-500/30 transition-colors"
+            >
+                <h3
+                    class="text-sm font-semibold text-purple-400 mb-2 flex items-center gap-2"
+                >
+                    <svg
+                        class="w-4 h-4"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd"></path>
                     </svg>
                     Enfoque Técnico
                 </h3>
                 <p class="text-sm text-gray-300 leading-relaxed">
-                    Administración Linux, arquitecturas SOA, optimización de rendimiento 
-                    y aplicación de principios <span class="text-yellow-400 font-medium">SOLID y Clean Code</span>.
+                    Administración Linux, arquitecturas SOA, optimización de
+                    rendimiento y aplicación de principios <span
+                        class="text-yellow-400 font-medium"
+                        >SOLID y Clean Code</span
+                    >.
                 </p>
             </div>
         </div>
@@ -78,7 +120,7 @@ import Badge from "../components/ui/Badge.astro";
 
     <!-- Enlaces sociales -->
     <nav class="flex justify-center">
-        <ul class="flex gap-x-4 pt-6">
+        <ul class="flex flex-wrap justify-center gap-3 sm:gap-4 pt-4 sm:pt-6">
             <SocialIcons href="https://www.linkedin.com/in/llortegall/">
                 <LinkedIn class="size-5" />
                 <span class="mt-0.5">LinkedIn</span>

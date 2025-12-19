@@ -47,25 +47,38 @@ const EXPERIENCIE = [
     description:
       "• Soporte técnico nivel 2 y 3 para usuarios internos y externos.\n• Administración de servidores Linux y Windows.\n• Configuración de redes, servicios y dispositivos corporativos.\n• Testing de aplicaciones web y móviles en diferentes entornos.\n• Resolución de incidencias mediante scripting (bash/shell).\n• Documentación técnica de procedimientos y soluciones.",
     date: "2020 --- 2023",
-    tecnologias: ["Linux", "Windows Server", "Networking", "Bash/Shell", "Troubleshooting"],
+    tecnologias: [
+      "Linux",
+      "Windows Server",
+      "Networking",
+      "Bash/Shell",
+      "Troubleshooting",
+    ],
   },
 ];
 ---
 
-<section id="inicio" class="max-w-5xl mx-auto">
+<section id="inicio" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
   <!-- Título de la sección -->
-  <div class="text-center mb-12">
-    <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-3">
+  <div class="text-center mb-8 sm:mb-12">
+    <h1
+      class="text-3xl sm:text-4xl md:text-5xl font-bold bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-3"
+    >
       Experiencia Laboral
     </h1>
-    <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto rounded-full"></div>
+    <div
+      class="w-20 sm:w-24 h-1 bg-linear-to-r from-blue-400 to-purple-500 mx-auto rounded-full"
+    >
+    </div>
   </div>
 
   <!-- Timeline -->
-  <ol class="relative border-s-2 border-gradient-to-b from-blue-500 via-purple-500 to-pink-500 ml-4 md:ml-8">
+  <ol
+    class="relative border-s-2 border-gradient-to-b from-blue-500 via-purple-500 to-pink-500 ml-2 sm:ml-4 md:ml-8"
+  >
     {
       EXPERIENCIE.map((item, index) => (
-        <li class="mb-12 ms-6 md:ms-10 group">
+        <li class="mb-8 sm:mb-12 ms-4 sm:ms-6 md:ms-10 group">
           <ExperienciaItem {...item} index={index} />
         </li>
       ))

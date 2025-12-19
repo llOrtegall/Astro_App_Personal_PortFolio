@@ -7,7 +7,7 @@ const sectionConfig: Record<string, string> = {
   experiencia: "min-h-screen py-20",
   sobremi: "min-h-screen py-20",
   contacto: "min-h-screen py-20",
-  proyectos: "min-h-screen py-20"
+  proyectos: "min-h-screen py-20",
 };
 
 const sectionClasses = sectionConfig[id || ""] || "min-h-screen py-20";
@@ -15,5 +15,5 @@ const containerClasses = `w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${sectio
 ---
 
 <section class={containerClasses} id={id}>
-    <slot />
+  <slot />
 </section>
