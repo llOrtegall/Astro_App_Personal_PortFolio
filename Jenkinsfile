@@ -51,7 +51,6 @@ pipeline {
             steps {
                 sh '''
                    echo "🔨 Building Astro project..."
-                   rm -rf dist/
                    bun run build
                    echo "✓ Build completed successfully"
                 '''
