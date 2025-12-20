@@ -104,27 +104,42 @@ pipeline {
     post {
         always {
             echo "📋 Pipeline execution completed"
-            cleanWs()
         }
         
         success {
             echo "✅ Pipeline succeeded - Portfolio deployed successfully!"
             sh '''
+               set +e
                echo "🎉 Deployment Summary:"
-               echo "   - Build artifacts: $(ls -lh dist/index.html 2>/dev/null | awk '{print $5}' || echo 'N/A')"
-               docker compose -f config/docker-compose.yaml ps
+               if [ -f dist/index.html ]; then
+                   echo "   - Build artifacts: $(ls -lh dist/index.html 2>/dev/null | awk '{print $5}')"
+               fi
+               if [ -f config/docker-compose.yaml ]; then
+                   docker compose -f config/docker-compose.yaml ps
+               else
+                   echo "   - Docker compose config not in workspace (cleaned)"
+               fi
             '''
         }
         
         failure {
             echo "❌ Pipeline failed - Check logs for details"
             sh '''
+               set +e
                echo "🔍 Docker services status on failure:"
-               docker compose -f config/docker-compose.yaml ps
-               echo ""
-               echo "📋 Recent Docker logs:"
-               docker compose -f config/docker-compose.yaml logs --tail=20
+               if [ -f config/docker-compose.yaml ]; then
+                   docker compose -f config/docker-compose.yaml ps
+                   echo ""
+                   echo "📋 Recent Docker logs:"
+                   docker compose -f config/docker-compose.yaml logs --tail=20
+               else
+                   echo "   - Docker compose config not accessible"
+               fi
             '''
+        }
+        
+        cleanup {
+            cleanWs()
         }
     }
 
