@@ -24,31 +24,14 @@ pipeline {
             }
         }
 
-        stage('Docker Network') {
+        stage('Up Docker Compose') {
             steps {
                 sh '''
-                    if ! docker network inspect ${DOCKER_NETWORK} >/dev/null 2>&1; then
-                      docker network create ${DOCKER_NETWORK}
-                    fi
+                   docker compose up -d
                 '''
             }
         }
 
-        stage('Deploy') {
-            steps {
-                sh '''
-                    export DOCKER_NETWORK=${DOCKER_NETWORK}
-                    docker compose -f config/docker-compose.yaml down || true
-                    docker compose -f config/docker-compose.yaml up -d --remove-orphans
-                    docker compose -f config/docker-compose.yaml ps
-                '''
-            }
-        }
     }
 
-    post {
-        always {
-            sh 'docker compose -f config/docker-compose.yaml ps || true'
-        }
-    }
 }
