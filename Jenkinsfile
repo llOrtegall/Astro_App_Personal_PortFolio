@@ -1,15 +1,6 @@
 pipeline {
     agent any
 
-    options {
-        timestamps()
-        timeout(time: 30, unit: 'MINUTES')
-        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '5'))
-    }
-
-    parameters {
-        booleanParam(name: 'FORCE_CLEAN', defaultValue: false, description: 'Force clean build (remove node_modules and dist)')
-    }
 
     tools {
         nodejs 'node-v24'
@@ -21,19 +12,6 @@ pipeline {
             steps {
                 checkout scm
                 echo "✓ Repository checked out successfully"
-            }
-        }
-
-        stage('Clean') {
-            when {
-                expression { params.FORCE_CLEAN == true }
-            }
-            steps {
-                sh '''
-                   echo "🧹 Cleaning build artifacts..."
-                   rm -rf dist/ node_modules/ .bun/
-                   echo "✓ Cleanup completed"
-                '''
             }
         }
 
@@ -98,48 +76,6 @@ pipeline {
             }
         }
 
-    }
-
-    post {
-        always {
-            echo "📋 Pipeline execution completed"
-        }
-        
-        success {
-            echo "✅ Pipeline succeeded - Portfolio deployed successfully!"
-            sh '''
-               set +e
-               echo "🎉 Deployment Summary:"
-               if [ -f dist/index.html ]; then
-                   echo "   - Build artifacts: $(ls -lh dist/index.html 2>/dev/null | awk '{print $5}')"
-               fi
-               if [ -f config/docker-compose.yaml ]; then
-                   docker compose -f config/docker-compose.yaml ps
-               else
-                   echo "   - Docker compose config not in workspace (cleaned)"
-               fi
-            '''
-        }
-        
-        failure {
-            echo "❌ Pipeline failed - Check logs for details"
-            sh '''
-               set +e
-               echo "🔍 Docker services status on failure:"
-               if [ -f config/docker-compose.yaml ]; then
-                   docker compose -f config/docker-compose.yaml ps
-                   echo ""
-                   echo "📋 Recent Docker logs:"
-                   docker compose -f config/docker-compose.yaml logs --tail=20
-               else
-                   echo "   - Docker compose config not accessible"
-               fi
-            '''
-        }
-        
-        cleanup {
-            cleanWs()
-        }
     }
 
 }
