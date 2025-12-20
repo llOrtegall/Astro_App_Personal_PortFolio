@@ -5,10 +5,6 @@ pipeline {
         nodejs 'node-v24'
     }
 
-    parameters {
-        string(name: 'DOCKER_NETWORK', defaultValue: 'ortega-net', description: 'Red Docker externa para Nginx')
-    }
-
     stages {
 
         stage('Install deps') {
@@ -24,10 +20,27 @@ pipeline {
             }
         }
 
+        stage('Down Docker Compose') {
+            steps {
+                sh '''
+                   docker compose -f config/docker-compose.yaml down
+                '''
+            }
+        }
+
         stage('Up Docker Compose') {
             steps {
                 sh '''
-                   docker compose up -d
+                   docker compose -f config/docker-compose.yaml up -d --remove-orphans
+                '''
+            }
+        }
+
+        stage('Validate Curl Response') {
+            steps {
+                sh '''
+                   sleep 10
+                   curl -I https://backend-portfolio.lortegal.com
                 '''
             }
         }
