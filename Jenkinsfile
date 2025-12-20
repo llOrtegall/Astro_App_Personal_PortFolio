@@ -1,28 +1,15 @@
 pipeline {
     agent any
 
-    options {
-        timestamps()
-        ansiColor('xterm')
+    tools {
+        nodejs 'node-v24'
     }
 
     parameters {
         string(name: 'DOCKER_NETWORK', defaultValue: 'ortega-net', description: 'Red Docker externa para Nginx')
     }
 
-    environment {
-        NODE_ENV = 'production'
-        # Desactiva prompts de npm
-        NPM_CONFIG_FUND = 'false'
-        NPM_CONFIG_AUDIT = 'false'
-    }
-
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
 
         stage('Install deps') {
             steps {
