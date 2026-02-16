@@ -4,7 +4,7 @@ import GitHub from "./icons/GitHub.astro";
 import Mail from "./icons/Mail.astro";
 ---
 
-<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="max-w-6xl mx-auto px-2 sm:px-4 lg:px-6">
     <!-- Título de la sección -->
     <div class="text-center mb-8 sm:mb-12">
         <h2
@@ -48,7 +48,9 @@ import Mail from "./icons/Mail.astro";
                         Escríbeme directamente para discutir oportunidades
                         laborales
                     </p>
-                    <span class="text-blue-400 text-sm font-medium">
+                    <span
+                        class="text-blue-400 text-xs sm:text-sm font-medium break-all"
+                    >
                         IvanOrtega_97@hotmail.com
                     </span>
                 </div>
@@ -58,19 +60,23 @@ import Mail from "./icons/Mail.astro";
                 href="https://www.linkedin.com/in/llortegall/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="group bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-blue-500/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                class="group bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-gray-700/50 hover:border-blue-500/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
                 <div class="flex flex-col items-center space-y-3">
                     <div
-                        class="p-3 bg-blue-500/20 rounded-full group-hover:bg-blue-500/30 transition-colors"
+                        class="p-2 sm:p-3 bg-blue-500/20 rounded-full group-hover:bg-blue-500/30 transition-colors"
                     >
-                        <LinkedIn class="w-8 h-8 text-blue-400" />
+                        <LinkedIn class="w-6 h-6 sm:w-8 sm:h-8 text-blue-400" />
                     </div>
-                    <h3 class="text-lg font-semibold text-white">LinkedIn</h3>
-                    <p class="text-gray-300 text-sm text-center">
+                    <h3 class="text-base sm:text-lg font-semibold text-white">
+                        LinkedIn
+                    </h3>
+                    <p class="text-gray-300 text-xs sm:text-sm text-center">
                         Conecta conmigo para ampliar nuestra red profesional
                     </p>
-                    <span class="text-blue-400 text-sm font-medium">
+                    <span
+                        class="text-blue-400 text-xs sm:text-sm font-medium break-all"
+                    >
                         linkedin.com/in/llortegall
                     </span>
                 </div>
@@ -80,19 +86,23 @@ import Mail from "./icons/Mail.astro";
                 href="https://github.com/llOrtegall"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="group bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-gray-500/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                class="group bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-gray-700/50 hover:border-gray-500/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
                 <div class="flex flex-col items-center space-y-3">
                     <div
-                        class="p-3 bg-gray-500/20 rounded-full group-hover:bg-gray-500/30 transition-colors"
+                        class="p-2 sm:p-3 bg-gray-500/20 rounded-full group-hover:bg-gray-500/30 transition-colors"
                     >
-                        <GitHub class="w-8 h-8 text-gray-300" />
+                        <GitHub class="w-6 h-6 sm:w-8 sm:h-8 text-gray-300" />
                     </div>
-                    <h3 class="text-lg font-semibold text-white">GitHub</h3>
-                    <p class="text-gray-300 text-sm text-center">
+                    <h3 class="text-base sm:text-lg font-semibold text-white">
+                        GitHub
+                    </h3>
+                    <p class="text-gray-300 text-xs sm:text-sm text-center">
                         Revisa mi código y proyectos en desarrollo
                     </p>
-                    <span class="text-gray-300 text-sm font-medium">
+                    <span
+                        class="text-gray-300 text-xs sm:text-sm font-medium break-all"
+                    >
                         github.com/llOrtegall
                     </span>
                 </div>
@@ -101,13 +111,13 @@ import Mail from "./icons/Mail.astro";
     </div>
 </section>
 
-<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 m-8">
+<section class="max-w-6xl mx-auto px-2 sm:px-4 lg:px-6 mt-6 sm:mt-8">
     <!-- Sección "Disponible para" mejorada -->
     <div
-        class="bg-linear-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-sm p-8 rounded-2xl border border-blue-500/30 shadow-lg my-4"
+        class="bg-linear-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-sm p-4 sm:p-6 lg:p-8 rounded-xl sm:rounded-2xl border border-blue-500/30 shadow-lg my-4"
     >
         <h3
-            class="text-2xl font-bold text-white mb-6 text-center flex items-center justify-center gap-2"
+            class="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 text-center flex items-center justify-center gap-2"
         >
             <svg
                 class="w-6 h-6 text-green-400"
@@ -121,15 +131,17 @@ import Mail from "./icons/Mail.astro";
             </svg>
             Disponible para
         </h3>
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="space-y-3">
+        <div class="grid md:grid-cols-2 gap-3 sm:gap-6">
+            <div class="space-y-2.5 sm:space-y-3">
                 <div
                     class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
                 >
                     <span
                         class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
                     ></span>
-                    <span>Desarrollo Full Stack / APIs</span>
+                    <span class="text-sm sm:text-base"
+                        >Desarrollo Full Stack / APIs</span
+                    >
                 </div>
                 <div
                     class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
@@ -137,7 +149,9 @@ import Mail from "./icons/Mail.astro";
                     <span
                         class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
                     ></span>
-                    <span>Frontend con React / Next.js</span>
+                    <span class="text-sm sm:text-base"
+                        >Frontend con React / Next.js</span
+                    >
                 </div>
                 <div
                     class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
@@ -145,7 +159,9 @@ import Mail from "./icons/Mail.astro";
                     <span
                         class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
                     ></span>
-                    <span>Microservicios & Docker</span>
+                    <span class="text-sm sm:text-base"
+                        >Microservicios & Docker</span
+                    >
                 </div>
                 <div
                     class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
@@ -153,17 +169,19 @@ import Mail from "./icons/Mail.astro";
                     <span
                         class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
                     ></span>
-                    <span>Node.js / TypeScript</span>
+                    <span class="text-sm sm:text-base"
+                        >Node.js / TypeScript</span
+                    >
                 </div>
             </div>
-            <div class="space-y-3">
+            <div class="space-y-2.5 sm:space-y-3">
                 <div
                     class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
                 >
                     <span
                         class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
                     ></span>
-                    <span>DevOps & CI/CD</span>
+                    <span class="text-sm sm:text-base">DevOps & CI/CD</span>
                 </div>
                 <div
                     class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
@@ -171,7 +189,9 @@ import Mail from "./icons/Mail.astro";
                     <span
                         class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
                     ></span>
-                    <span>Integración cloud y despliegues</span>
+                    <span class="text-sm sm:text-base"
+                        >Integración cloud y despliegues</span
+                    >
                 </div>
                 <div
                     class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
@@ -179,7 +199,9 @@ import Mail from "./icons/Mail.astro";
                     <span
                         class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
                     ></span>
-                    <span>Trabajo remoto/híbrido</span>
+                    <span class="text-sm sm:text-base"
+                        >Trabajo remoto/híbrido</span
+                    >
                 </div>
                 <div
                     class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
@@ -187,7 +209,9 @@ import Mail from "./icons/Mail.astro";
                     <span
                         class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
                     ></span>
-                    <span>Colaboración en equipo</span>
+                    <span class="text-sm sm:text-base"
+                        >Colaboración en equipo</span
+                    >
                 </div>
             </div>
         </div>
@@ -195,9 +219,11 @@ import Mail from "./icons/Mail.astro";
 
     <!-- Tiempo de respuesta -->
     <div
-        class="bg-linear-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/40 text-center"
+        class="bg-linear-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-gray-700/40 text-center"
     >
-        <p class="text-gray-200 text-lg flex items-center justify-center gap-3">
+        <p
+            class="text-gray-200 text-sm sm:text-lg flex items-center justify-center gap-2 sm:gap-3 flex-wrap"
+        >
             <svg
                 class="w-6 h-6 text-blue-400"
                 fill="currentColor"

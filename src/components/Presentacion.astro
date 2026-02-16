@@ -6,17 +6,17 @@ import Mail from "../components/icons/Mail.astro";
 import Badge from "../components/ui/Badge.astro";
 ---
 
-<section id="inicio" class="px-4 sm:px-6 lg:px-8">
+<section id="inicio" class="px-2 sm:px-4 lg:px-6">
     <!-- Título principal -->
     <h1
-        class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center pb-2 text-balance leading-tight"
+        class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center pb-2 text-balance leading-[1.1]"
     >
         Ivan Ortega Garzón
     </h1>
 
     <!-- Subtítulo profesional -->
     <h2
-        class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-center text-gray-300 font-light mb-3 sm:mb-4 px-2"
+        class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-center text-gray-300 font-light mb-3 sm:mb-4 px-2 leading-snug"
     >
         Full Stack Developer | TypeScript, React & Node.js
     </h2>
@@ -33,13 +33,13 @@ import Badge from "../components/ui/Badge.astro";
     </div>
 
     <!-- Propuesta de valor principal -->
-    <article class="max-w-4xl mx-auto space-y-4 sm:space-y-6">
+    <article class="max-w-4xl mx-auto space-y-4 sm:space-y-5 lg:space-y-6">
         <!-- Presentación principal -->
         <div
-            class="bg-linear-to-r from-gray-800/40 to-gray-700/40 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-gray-700/50 shadow-xl"
+            class="bg-linear-to-r from-gray-800/40 to-gray-700/40 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-6 border border-gray-700/50 shadow-xl"
         >
             <p
-                class="text-base sm:text-lg text-gray-200 leading-relaxed text-pretty"
+                class="text-base sm:text-lg text-gray-200 leading-relaxed sm:leading-8 text-pretty"
             >
                 Desarrollador Full Stack con <span
                     class="text-blue-400 font-semibold"
@@ -80,7 +80,7 @@ import Badge from "../components/ui/Badge.astro";
                     </svg>
                     Stack Adicional
                 </h3>
-                <p class="text-sm text-gray-300 leading-relaxed">
+                <p class="text-sm sm:text-[15px] text-gray-300 leading-relaxed">
                     Experiencia adicional con <span
                         class="text-red-400 font-medium"
                         >Java (OpenJDK + 17)</span
@@ -92,7 +92,7 @@ import Badge from "../components/ui/Badge.astro";
             </div>
 
             <div
-                class="bg-gray-800/30 backdrop-blur-sm rounded-xl p-5 border border-gray-700/40 hover:border-purple-500/30 transition-colors"
+                class="bg-gray-800/30 backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-gray-700/40 hover:border-purple-500/30 transition-colors"
             >
                 <h3
                     class="text-sm font-semibold text-purple-400 mb-2 flex items-center gap-2"
@@ -109,7 +109,7 @@ import Badge from "../components/ui/Badge.astro";
                     </svg>
                     Enfoque Técnico
                 </h3>
-                <p class="text-sm text-gray-300 leading-relaxed">
+                <p class="text-sm sm:text-[15px] text-gray-300 leading-relaxed">
                     Administración Linux, arquitecturas SOA, optimización de
                     rendimiento y aplicación de principios <span
                         class="text-yellow-400 font-medium"
@@ -122,7 +122,7 @@ import Badge from "../components/ui/Badge.astro";
 
     <!-- Enlaces sociales -->
     <nav class="flex justify-center">
-        <ul class="flex flex-wrap justify-center gap-3 sm:gap-4 pt-4 sm:pt-6">
+        <ul class="flex flex-wrap justify-center gap-2.5 sm:gap-4 pt-4 sm:pt-6">
             <SocialIcons href="https://www.linkedin.com/in/llortegall/">
                 <LinkedIn class="size-5" />
                 <span class="mt-0.5">LinkedIn</span>
