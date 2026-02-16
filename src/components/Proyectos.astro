@@ -7,7 +7,7 @@ const PROJECTS = [
             "Plataforma full-stack para compartir archivos de forma segura con Cloudflare R2, carga directa desde el navegador y enlaces de descarga únicos.",
         link: "https://wshare.cc/",
         github: "https://github.com/llOrtegall/w_shared_files",
-        image: "",
+        image: "wshare.png",
         technologies: [
             "React",
             "TypeScript",
@@ -23,12 +23,12 @@ const PROJECTS = [
     },
     {
         id: 2,
-        title: "App Chat Free Easy",
+        title: "Splice Vip Remixer",
         description:
-            "Plataforma de mensajería en tiempo real con autenticación social (Google/GitHub), despliegue en VPS y arquitectura con proxy reverse.",
-        link: "https://chat-free.apps-ortega.cloud",
-        github: "https://github.com/llOrtegall/chat_free_easy",
-        image: "chat-free.png",
+            "Plataforma para descargar contenido multimedia de forma automatizada con Puppeteer y procesamiento en tiempo real con FFmpeg, incluyendo grabación de audio.",
+        link: "https://splice.vipremixer.com/",
+        github: "https://github.com/llOrtegall/web-scrapper-splice",
+        image: "splice.png",
         technologies: [
             "Next.js 15",
             "TypeScript",
@@ -43,46 +43,24 @@ const PROJECTS = [
     },
     {
         id: 3,
-        title: "Java Online Playground",
+        title: "Landing WinkerMind",
         description:
-            "Entorno de ejecución de código Java en línea construido con Node.js, TypeScript, Docker y React. Permite ejecutar código Java de forma segura en contenedores aislados directamente desde el navegador con límites de recursos (128MB RAM, 0.5 CPU cores, timeout 5s).",
-        link: "https://java-execute.ortega-apps.cloud",
-        github: "https://github.com/llOrtegall/java-online",
-        image: "java-playground.png",
+            "Landing page para WinkerMind, destacando características y beneficios del producto con un diseño moderno y responsivo.",
+        link: "https://landingwinker.lortegal.com/",
+        github: "https://github.com/llOrtegall/astro-landing-winker",
+        image: "landing.png",
         technologies: [
-            "React",
-            "Vite",
+            "Astro",
             "TypeScript",
-            "NodeJS",
-            "Express",
-            "Docker",
-            "OpenJDK-21",
-            "Nginx",
+            "TailwindCSS",
+            "Framer Motion",
+            "Cloduflare",
         ],
         status: "En producción",
         featured: true,
     },
     {
-        id: 4,
-        title: "Web Scrapper Splice",
-        description:
-            "Automatización de extracción multimedia con Puppeteer y procesamiento con FFmpeg, incluyendo flujos de captura y procesamiento en tiempo real.",
-        link: "https://splice.vipremixer.com/",
-        github: "https://github.com/llOrtegall/web-scrapper-splice",
-        image: "",
-        technologies: [
-            "Node.js",
-            "TypeScript",
-            "Puppeteer",
-            "FFmpeg",
-            "Docker",
-            "Nginx",
-        ],
-        status: "En producción",
-        featured: false,
-    },
-    {
-        id: 5,
+        id: 6,
         title: "React Marketplace App",
         description:
             "Aplicación de marketplace enfocada en experiencia de usuario, manejo de estado y consumo de APIs para flujos de productos y catálogo.",
@@ -94,7 +72,7 @@ const PROJECTS = [
         featured: false,
     },
     {
-        id: 6,
+        id: 7,
         title: "Clean Architecture Node",
         description:
             "Proyecto orientado a DDD y Clean Architecture con TypeScript, Express, Zod y persistencia SQL/NoSQL para diseño backend mantenible.",
@@ -132,7 +110,7 @@ const PROJECTS = [
         </p>
     </div>
 
-    <div class="space-y-6">
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
         {
             PROJECTS.map((project) => (
                 <article class="group relative overflow-hidden rounded-xl border border-gray-700/50 bg-gray-800/50 backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:border-blue-500/30">
@@ -158,8 +136,8 @@ const PROJECTS = [
                         </div>
                     )}
 
-                    <div class="grid md:grid-cols-2 min-h-50">
-                        <div class="relative overflow-hidden h-48 md:h-auto bg-linear-to-br from-gray-700 to-gray-900">
+                    <div class="grid grid-cols-1 min-h-50">
+                        <div class="relative overflow-hidden h-48 bg-linear-to-br from-gray-700 to-gray-900">
                             {project.image ? (
                                 <img
                                     src={project.image}
