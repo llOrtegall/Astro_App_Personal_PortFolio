@@ -24,6 +24,12 @@
       "quoteStyle": "single"
     }
   },
+  "html": {
+    "formatter": {
+      "indentStyle": "space",
+      "indentWidth": 2
+    }
+  },
   "assist": {
     "enabled": true,
     "actions": {

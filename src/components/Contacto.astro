@@ -1,244 +1,202 @@
 ---
-import LinkedIn from './icons/LinkedIn.astro';
-import GitHub from './icons/GitHub.astro';
-import Mail from './icons/Mail.astro';
+import LinkedIn from "./icons/LinkedIn.astro";
+import GitHub from "./icons/GitHub.astro";
+import Mail from "./icons/Mail.astro";
 ---
 
 <section class="max-w-6xl mx-auto px-2 sm:px-4 lg:px-6">
-    <!-- Título de la sección -->
-    <div class="text-center mb-8 sm:mb-12">
-        <h2
-            class="text-3xl sm:text-4xl md:text-5xl font-bold bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-3"
-        >
-            ¡Trabajemos Juntos!
-        </h2>
-        <div
-            class="w-20 sm:w-24 h-1 bg-linear-to-r from-blue-400 to-purple-500 mx-auto rounded-full mb-4 sm:mb-6"
-        >
-        </div>
-        <p
-            class="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed px-4"
-        >
-            ¿Buscas un <span class="text-blue-400 font-semibold"
-                >Full Stack Developer</span
-            > comprometido? Me encantaría conocer más sobre tu proyecto y cómo puedo
-            aportar valor a tu equipo.
-        </p>
+  <!-- Título de la sección -->
+  <div class="text-center mb-8 sm:mb-12">
+    <h2
+      class="text-3xl sm:text-4xl md:text-5xl font-bold bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-3"
+    >
+      ¡Trabajemos Juntos!
+    </h2>
+    <div
+      class="w-20 sm:w-24 h-1 bg-linear-to-r from-blue-400 to-purple-500 mx-auto rounded-full mb-4 sm:mb-6"
+    >
     </div>
+    <p
+      class="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed px-4"
+    >
+      ¿Buscas un <span class="text-blue-400 font-semibold"
+        >Full Stack Developer</span
+      > comprometido? Me encantaría conocer más sobre tu proyecto y cómo puedo aportar
+      valor a tu equipo.
+    </p>
+  </div>
 
-    <div class="space-y-6 sm:space-y-8 lg:space-y-10">
-        <!-- Cards de contacto -->
-        <div
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6"
-        >
-            <a
-                href="mailto:IvanOrtega_97@hotmail.com"
-                class="group bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-gray-700/50 hover:border-blue-500/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-            >
-                <div class="flex flex-col items-center space-y-2 sm:space-y-3">
-                    <div
-                        class="p-2 sm:p-3 bg-blue-500/20 rounded-full group-hover:bg-blue-500/30 transition-colors"
-                    >
-                        <Mail class="w-6 h-6 sm:w-8 sm:h-8 text-blue-400" />
-                    </div>
-                    <h3 class="text-base sm:text-lg font-semibold text-white">
-                        Email
-                    </h3>
-                    <p class="text-gray-300 text-xs sm:text-sm text-center">
-                        Escríbeme directamente para discutir oportunidades
-                        laborales
-                    </p>
-                    <span
-                        class="text-blue-400 text-xs sm:text-sm font-medium break-all"
-                    >
-                        IvanOrtega_97@hotmail.com
-                    </span>
-                </div>
-            </a>
-
-            <a
-                href="https://www.linkedin.com/in/llortegall/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="group bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-gray-700/50 hover:border-blue-500/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-            >
-                <div class="flex flex-col items-center space-y-3">
-                    <div
-                        class="p-2 sm:p-3 bg-blue-500/20 rounded-full group-hover:bg-blue-500/30 transition-colors"
-                    >
-                        <LinkedIn class="w-6 h-6 sm:w-8 sm:h-8 text-blue-400" />
-                    </div>
-                    <h3 class="text-base sm:text-lg font-semibold text-white">
-                        LinkedIn
-                    </h3>
-                    <p class="text-gray-300 text-xs sm:text-sm text-center">
-                        Conecta conmigo para ampliar nuestra red profesional
-                    </p>
-                    <span
-                        class="text-blue-400 text-xs sm:text-sm font-medium break-all"
-                    >
-                        linkedin.com/in/llortegall
-                    </span>
-                </div>
-            </a>
-
-            <a
-                href="https://github.com/llOrtegall"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="group bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-gray-700/50 hover:border-gray-500/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-            >
-                <div class="flex flex-col items-center space-y-3">
-                    <div
-                        class="p-2 sm:p-3 bg-gray-500/20 rounded-full group-hover:bg-gray-500/30 transition-colors"
-                    >
-                        <GitHub class="w-6 h-6 sm:w-8 sm:h-8 text-gray-300" />
-                    </div>
-                    <h3 class="text-base sm:text-lg font-semibold text-white">
-                        GitHub
-                    </h3>
-                    <p class="text-gray-300 text-xs sm:text-sm text-center">
-                        Revisa mi código y proyectos en desarrollo
-                    </p>
-                    <span
-                        class="text-gray-300 text-xs sm:text-sm font-medium break-all"
-                    >
-                        github.com/llOrtegall
-                    </span>
-                </div>
-            </a>
+  <div class="space-y-6 sm:space-y-8 lg:space-y-10">
+    <!-- Cards de contacto -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+      <a
+        href="mailto:IvanOrtega_97@hotmail.com"
+        class="group bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-gray-700/50 hover:border-blue-500/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+      >
+        <div class="flex flex-col items-center space-y-2 sm:space-y-3">
+          <div
+            class="p-2 sm:p-3 bg-blue-500/20 rounded-full group-hover:bg-blue-500/30 transition-colors"
+          >
+            <Mail class="w-6 h-6 sm:w-8 sm:h-8 text-blue-400" />
+          </div>
+          <h3 class="text-base sm:text-lg font-semibold text-white">Email</h3>
+          <p class="text-gray-300 text-xs sm:text-sm text-center">
+            Escríbeme directamente para discutir oportunidades laborales
+          </p>
+          <span class="text-blue-400 text-xs sm:text-sm font-medium break-all">
+            IvanOrtega_97@hotmail.com
+          </span>
         </div>
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/llortegall/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-gray-700/50 hover:border-blue-500/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+      >
+        <div class="flex flex-col items-center space-y-3">
+          <div
+            class="p-2 sm:p-3 bg-blue-500/20 rounded-full group-hover:bg-blue-500/30 transition-colors"
+          >
+            <LinkedIn class="w-6 h-6 sm:w-8 sm:h-8 text-blue-400" />
+          </div>
+          <h3 class="text-base sm:text-lg font-semibold text-white">
+            LinkedIn
+          </h3>
+          <p class="text-gray-300 text-xs sm:text-sm text-center">
+            Conecta conmigo para ampliar nuestra red profesional
+          </p>
+          <span class="text-blue-400 text-xs sm:text-sm font-medium break-all">
+            linkedin.com/in/llortegall
+          </span>
+        </div>
+      </a>
+
+      <a
+        href="https://github.com/llOrtegall"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-gray-700/50 hover:border-gray-500/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+      >
+        <div class="flex flex-col items-center space-y-3">
+          <div
+            class="p-2 sm:p-3 bg-gray-500/20 rounded-full group-hover:bg-gray-500/30 transition-colors"
+          >
+            <GitHub class="w-6 h-6 sm:w-8 sm:h-8 text-gray-300" />
+          </div>
+          <h3 class="text-base sm:text-lg font-semibold text-white">GitHub</h3>
+          <p class="text-gray-300 text-xs sm:text-sm text-center">
+            Revisa mi código y proyectos en desarrollo
+          </p>
+          <span class="text-gray-300 text-xs sm:text-sm font-medium break-all">
+            github.com/llOrtegall
+          </span>
+        </div>
+      </a>
     </div>
+  </div>
 </section>
 
 <section class="max-w-6xl mx-auto px-2 sm:px-4 lg:px-6 mt-6 sm:mt-8">
-    <!-- Sección "Disponible para" mejorada -->
-    <div
-        class="bg-linear-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-sm p-4 sm:p-6 lg:p-8 rounded-xl sm:rounded-2xl border border-blue-500/30 shadow-lg my-4"
+  <!-- Sección "Disponible para" mejorada -->
+  <div
+    class="bg-linear-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-sm p-4 sm:p-6 lg:p-8 rounded-xl sm:rounded-2xl border border-blue-500/30 shadow-lg my-4"
+  >
+    <h3
+      class="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 text-center flex items-center justify-center gap-2"
     >
-        <h3
-            class="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 text-center flex items-center justify-center gap-2"
+      <svg
+        class="w-6 h-6 text-green-400"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+          clip-rule="evenodd"></path>
+      </svg>
+      Disponible para
+    </h3>
+    <div class="grid md:grid-cols-2 gap-3 sm:gap-6">
+      <div class="space-y-2.5 sm:space-y-3">
+        <div
+          class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
         >
-            <svg
-                class="w-6 h-6 text-green-400"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-            >
-                <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"></path>
-            </svg>
-            Disponible para
-        </h3>
-        <div class="grid md:grid-cols-2 gap-3 sm:gap-6">
-            <div class="space-y-2.5 sm:space-y-3">
-                <div
-                    class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
-                >
-                    <span
-                        class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
-                    ></span>
-                    <span class="text-sm sm:text-base"
-                        >Desarrollo Full Stack / APIs</span
-                    >
-                </div>
-                <div
-                    class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
-                >
-                    <span
-                        class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
-                    ></span>
-                    <span class="text-sm sm:text-base"
-                        >Frontend con React / Next.js</span
-                    >
-                </div>
-                <div
-                    class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
-                >
-                    <span
-                        class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
-                    ></span>
-                    <span class="text-sm sm:text-base"
-                        >Microservicios & Docker</span
-                    >
-                </div>
-                <div
-                    class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
-                >
-                    <span
-                        class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
-                    ></span>
-                    <span class="text-sm sm:text-base"
-                        >Node.js / TypeScript</span
-                    >
-                </div>
-            </div>
-            <div class="space-y-2.5 sm:space-y-3">
-                <div
-                    class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
-                >
-                    <span
-                        class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
-                    ></span>
-                    <span class="text-sm sm:text-base">DevOps & CI/CD</span>
-                </div>
-                <div
-                    class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
-                >
-                    <span
-                        class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
-                    ></span>
-                    <span class="text-sm sm:text-base"
-                        >Integración cloud y despliegues</span
-                    >
-                </div>
-                <div
-                    class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
-                >
-                    <span
-                        class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
-                    ></span>
-                    <span class="text-sm sm:text-base"
-                        >Trabajo remoto/híbrido</span
-                    >
-                </div>
-                <div
-                    class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
-                >
-                    <span
-                        class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
-                    ></span>
-                    <span class="text-sm sm:text-base"
-                        >Colaboración en equipo</span
-                    >
-                </div>
-            </div>
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+          <span class="text-sm sm:text-base">Desarrollo Full Stack / APIs</span>
         </div>
-    </div>
-
-    <!-- Tiempo de respuesta -->
-    <div
-        class="bg-linear-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-gray-700/40 text-center"
-    >
-        <p
-            class="text-gray-200 text-sm sm:text-lg flex items-center justify-center gap-2 sm:gap-3 flex-wrap"
+        <div
+          class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
         >
-            <svg
-                class="w-6 h-6 text-blue-400"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-            >
-                <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                    clip-rule="evenodd"></path>
-            </svg>
-            <span
-                ><span class="text-blue-400 font-semibold"
-                    >Tiempo de respuesta:</span
-                > Normalmente respondo en 12-24 horas</span
-            >
-        </p>
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+          <span class="text-sm sm:text-base">Frontend con React / Next.js</span>
+        </div>
+        <div
+          class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
+        >
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+          <span class="text-sm sm:text-base">Microservicios & Docker</span>
+        </div>
+        <div
+          class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
+        >
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+          <span class="text-sm sm:text-base">Node.js / TypeScript</span>
+        </div>
+      </div>
+      <div class="space-y-2.5 sm:space-y-3">
+        <div
+          class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
+        >
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+          <span class="text-sm sm:text-base">DevOps & CI/CD</span>
+        </div>
+        <div
+          class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
+        >
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+          <span class="text-sm sm:text-base"
+            >Integración cloud y despliegues</span
+          >
+        </div>
+        <div
+          class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
+        >
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+          <span class="text-sm sm:text-base">Trabajo remoto/híbrido</span>
+        </div>
+        <div
+          class="flex items-center gap-3 text-gray-200 bg-gray-800/30 px-4 py-2 rounded-lg"
+        >
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+          <span class="text-sm sm:text-base">Colaboración en equipo</span>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- Tiempo de respuesta -->
+  <div
+    class="bg-linear-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-gray-700/40 text-center"
+  >
+    <p
+      class="text-gray-200 text-sm sm:text-lg flex items-center justify-center gap-2 sm:gap-3 flex-wrap"
+    >
+      <svg
+        class="w-6 h-6 text-blue-400"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+          clip-rule="evenodd"></path>
+      </svg>
+      <span
+        ><span class="text-blue-400 font-semibold">Tiempo de respuesta:</span> Normalmente
+        respondo en 12-24 horas</span
+      >
+    </p>
+  </div>
 </section>
