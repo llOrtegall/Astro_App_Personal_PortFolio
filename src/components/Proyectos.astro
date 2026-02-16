@@ -1,95 +1,95 @@
 ---
 const PROJECTS = [
-    {
-        id: 1,
-        title: "W Shared Files",
-        description:
-            "Plataforma full-stack para compartir archivos de forma segura con Cloudflare R2, carga directa desde el navegador y enlaces de descarga únicos.",
-        link: "https://wshare.cc/",
-        github: "https://github.com/llOrtegall/w_shared_files",
-        image: "wshare.png",
-        technologies: [
-            "React",
-            "TypeScript",
-            "Node.js",
-            "Express",
-            "Cloudflare R2",
-            "PostgreSQL",
-            "TailwindCSS",
-            "Docker",
-        ],
-        status: "En producción",
-        featured: true,
-    },
-    {
-        id: 2,
-        title: "Splice Vip Remixer",
-        description:
-            "Plataforma para descargar contenido multimedia de forma automatizada con Puppeteer y procesamiento en tiempo real con FFmpeg, incluyendo grabación de audio.",
-        link: "https://splice.vipremixer.com/",
-        github: "https://github.com/llOrtegall/web-scrapper-splice",
-        image: "splice.png",
-        technologies: [
-            "Next.js 15",
-            "TypeScript",
-            "Node.js",
-            "WebSocket",
-            "TailwindCSS",
-            "Auth.js",
-            "Docker",
-        ],
-        status: "En producción",
-        featured: true,
-    },
-    {
-        id: 3,
-        title: "Landing WinkerMind",
-        description:
-            "Landing page para WinkerMind, destacando características y beneficios del producto con un diseño moderno y responsivo.",
-        link: "https://landingwinker.lortegal.com/",
-        github: "https://github.com/llOrtegall/astro-landing-winker",
-        image: "landing.png",
-        technologies: [
-            "Astro",
-            "TypeScript",
-            "TailwindCSS",
-            "Framer Motion",
-            "Cloduflare",
-        ],
-        status: "En producción",
-        featured: true,
-    },
-    {
-        id: 6,
-        title: "React Marketplace App",
-        description:
-            "Aplicación de marketplace enfocada en experiencia de usuario, manejo de estado y consumo de APIs para flujos de productos y catálogo.",
-        link: "",
-        github: "https://github.com/llOrtegall/react_marketplace_app",
-        image: "",
-        technologies: ["React", "TypeScript", "Vite", "TailwindCSS"],
-        status: "Código destacado",
-        featured: false,
-    },
-    {
-        id: 7,
-        title: "Clean Architecture Node",
-        description:
-            "Proyecto orientado a DDD y Clean Architecture con TypeScript, Express, Zod y persistencia SQL/NoSQL para diseño backend mantenible.",
-        link: "",
-        github: "https://github.com/llOrtegall/Clean_Architecture_Node",
-        image: "",
-        technologies: [
-            "TypeScript",
-            "Express",
-            "MySQL",
-            "MongoDB",
-            "Zod",
-            "Sequelize",
-        ],
-        status: "Código destacado",
-        featured: false,
-    },
+  {
+    id: 1,
+    title: 'W Shared Files',
+    description:
+      'Plataforma full-stack para compartir archivos de forma segura con Cloudflare R2, carga directa desde el navegador y enlaces de descarga únicos.',
+    link: 'https://wshare.cc/',
+    github: 'https://github.com/llOrtegall/w_shared_files',
+    image: 'wshare.png',
+    technologies: [
+      'React',
+      'TypeScript',
+      'Node.js',
+      'Express',
+      'Cloudflare R2',
+      'PostgreSQL',
+      'TailwindCSS',
+      'Docker',
+    ],
+    status: 'En producción',
+    featured: true,
+  },
+  {
+    id: 2,
+    title: 'Splice Vip Remixer',
+    description:
+      'Plataforma para descargar contenido multimedia de forma automatizada con Puppeteer y procesamiento en tiempo real con FFmpeg, incluyendo grabación de audio.',
+    link: 'https://splice.vipremixer.com/',
+    github: 'https://github.com/llOrtegall/web-scrapper-splice',
+    image: 'splice.png',
+    technologies: [
+      'Next.js 15',
+      'TypeScript',
+      'Node.js',
+      'WebSocket',
+      'TailwindCSS',
+      'Auth.js',
+      'Docker',
+    ],
+    status: 'En producción',
+    featured: true,
+  },
+  {
+    id: 3,
+    title: 'Landing WinkerMind',
+    description:
+      'Landing page para WinkerMind, destacando características y beneficios del producto con un diseño moderno y responsivo.',
+    link: 'https://landingwinker.lortegal.com/',
+    github: 'https://github.com/llOrtegall/astro-landing-winker',
+    image: 'landing.png',
+    technologies: [
+      'Astro',
+      'TypeScript',
+      'TailwindCSS',
+      'Framer Motion',
+      'Cloduflare',
+    ],
+    status: 'En producción',
+    featured: true,
+  },
+  {
+    id: 6,
+    title: 'React Marketplace App',
+    description:
+      'Aplicación de marketplace enfocada en experiencia de usuario, manejo de estado y consumo de APIs para flujos de productos y catálogo.',
+    link: '',
+    github: 'https://github.com/llOrtegall/react_marketplace_app',
+    image: '',
+    technologies: ['React', 'TypeScript', 'Vite', 'TailwindCSS'],
+    status: 'Código destacado',
+    featured: false,
+  },
+  {
+    id: 7,
+    title: 'Clean Architecture Node',
+    description:
+      'Proyecto orientado a DDD y Clean Architecture con TypeScript, Express, Zod y persistencia SQL/NoSQL para diseño backend mantenible.',
+    link: '',
+    github: 'https://github.com/llOrtegall/Clean_Architecture_Node',
+    image: '',
+    technologies: [
+      'TypeScript',
+      'Express',
+      'MySQL',
+      'MongoDB',
+      'Zod',
+      'Sequelize',
+    ],
+    status: 'Código destacado',
+    featured: false,
+  },
 ];
 ---
 
@@ -188,7 +188,7 @@ const PROJECTS = [
                                     {project.link && (
                                         <a
                                             href={project.link}
-                                            class="flex-1 min-w-[140px] bg-blue-600 hover:bg-blue-500 text-white py-2 px-3 sm:px-4 rounded-lg text-center text-sm font-medium transition-colors duration-200 flex items-center justify-center gap-2"
+                                            class="flex-1 min-w-35 bg-blue-600 hover:bg-blue-500 text-white py-2 px-3 sm:px-4 rounded-lg text-center text-sm font-medium transition-colors duration-200 flex items-center justify-center gap-2"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
