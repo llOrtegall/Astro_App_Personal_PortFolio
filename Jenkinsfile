@@ -70,7 +70,7 @@ pipeline {
                    docker ps --filter "name=.*portfolio.*" --format "table {{.Names}}\t{{.Status}}"
                    
                    echo "🌐 Validating API response..."
-                   curl -I https://backend-portfolio.lortegal.com
+                   curl -I https://portfolio.lortegal.com
                    echo "✓ Deployment validated successfully"
                 '''
             }
