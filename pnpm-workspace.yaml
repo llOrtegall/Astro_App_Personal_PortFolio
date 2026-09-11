@@ -1,0 +1,4 @@
+# Dependencias con permiso para ejecutar scripts de build (pnpm los bloquea por defecto)
+allowBuilds:
+  esbuild: true
+  sharp: true

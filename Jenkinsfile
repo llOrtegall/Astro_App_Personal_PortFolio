@@ -18,8 +18,9 @@ pipeline {
         stage('Install deps') {
             steps {
                 sh '''
-                   echo "📦 Installing dependencies with bun..."
-                   bun install --frozen-lockfile
+                   echo "📦 Installing dependencies with pnpm..."
+                   corepack enable && corepack prepare --activate
+                   pnpm install --frozen-lockfile
                    echo "✓ Dependencies installed"
                 '''
             }
@@ -29,7 +30,7 @@ pipeline {
             steps {
                 sh '''
                    echo "🔨 Building Astro project..."
-                   bun run build
+                   pnpm run build
                    echo "✓ Build completed successfully"
                 '''
                 archiveArtifacts artifacts: 'dist/**', fingerprint: true
